@@ -1,0 +1,9 @@
+# All other agents
+User-agent: *
+Disallow:
+Disallow: /cgi-bin/
+Disallow: /images/
+Disallow: /js/
+Disallow: /site/
+Disallow: /templates/
+Disallow: /docs/
