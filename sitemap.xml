@@ -5,13 +5,11 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/disclaimer.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
-<url><loc>https://matracking.ehs.state.ma.us/dph-reporting/credits.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Viewing.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/help-desk.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/home.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/EPHT_Program/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/National_EPHT_Program/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
-<url><loc>https://matracking.ehs.state.ma.us/dph-reporting/epht-in-action-norwood.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/success-stories/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/tutorial.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Links/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
@@ -70,8 +68,6 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Inspections/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Inspections/Food-Protection/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Inspections/Food-Protection/food_inspection_faq.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
-<url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Inspections/Mammography/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
-<url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Inspections/Mammography/mammography_faq.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Glossary/index.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/logon.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
 <url><loc>https://matracking.ehs.state.ma.us/dph-reporting/Health-Data/Asthma/Asthma-Hospitalization/Asthma_Hospitalization_FAQ.html</loc><lastmod>2014-10-23</lastmod><changefreq>weekly</changefreq></url>
