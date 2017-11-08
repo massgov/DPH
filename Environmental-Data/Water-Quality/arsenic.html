@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/epht.dwt" codeOutsideHTMLIsLocked="false" --> 
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Arsenic</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" href="/css/styles.css" type="text/css" />
+<script type="text/javascript" src="/js/modernizr-custom.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript" src="/js/toggles.js"></script>
+<script type="text/javascript">
+	function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top;
+    if (window_top > div_top)
+        $('#maps_and_tables').addClass('sticky');
+    else
+        $('#maps_and_tables').removeClass('sticky');
+}
+$(function() {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
+});
+	</script>
+    
+    <script type="text/javascript">
+$(function() {
+  $('#maps_and_tables2').hide();
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 300) {
+      $('#maps_and_tables2').show();
+    } else {
+      $('#maps_and_tables2').hide();
+    }
+  });
+})
+	</script>
+
+<!-- load a local copy of jquery IF the CDN copy doesn't load -->
+
+<script>
+//function doReturnList()
+//{
+//	var browserName = navigator.appName;
+//	if (browserName = "Netscape")
+//	{
+//	window.open('','_self');
+//	window.close();
+//	}
+//	else if (browserName = "Microsoft Internet Explorer")
+//	{
+//	window.opener='X'; 
+//	window.open('','_parent',''); 
+//	window.close();
+//	}
+//}
+</script>
+
+<!-- Jquery Tabs -->
+<!-- <link rel="stylesheet" href="/css/jquery-ui.css"> -->
+<!-- <script src="/js/jquery-1.10.2.js"></script> -->
+<!-- <script src="/js/jquery-ui.js"></script> -->
+<!-- <script src="/js/jquery.ba-bbq.js"></script> --> 
+   
+<!-- <script> -->
+<!-- $(function() { -->
+<!-- $( "#tabs" ).tabs(); -->
+<!-- }); -->
+<!--</script> -->
+
+<!-- tabs with back support -->
+
+<!--  Used for opening the report list box-->
+
+<script>
+//function wopen(url, name, w, h)
+//{
+  // Fudge factors for window decoration space.
+  // In my tests these work well on all platforms & browsers.
+//  w += 32;
+//  h += 96;
+//  wleft = (screen.width - w) / 2;
+//  wtop = (screen.height - h) / 2;
+  // IE5 and other old browsers might allow a window that is
+  // partially offscreen or wider than the screen. Fix that.
+  // (Newer browsers fix this for us, but let's be thorough.)
+//  if (wleft < 0) {
+//    w = screen.width;
+//    wleft = 0;
+//  }
+//  if (wtop < 0) {
+//    h = screen.height;
+//    wtop = 0;
+//  }
+//  var win = window.open(url,
+//    name,
+//    'width=' + w + ', height=' + h + ', ' +
+//    'left=' + wleft + ', top=' + wtop + ', ' +
+//    'location=no, menubar=no, ' +
+//    'directories=no,titlebar=no,status=no, toolbar=no, scrollbars=no, resizable=no');
+  // Just in case width and height are ignored
+//  win.resizeTo(w, h);
+  // Just in case left and top are ignored
+//  win.moveTo(wleft, wtop);
+//  win.focus();
+//}
+// -->
+</script>
+
+<!--  end report list window -->
+</head>
+<body> 
+     
+ <div class="outer-container"> 
+ 
+    	<ul class="header2">
+        	<li>
+            	<a id="massgov_link" href="http://www.mass.gov" target="_blank"><span class="offscreen">Go to Mass.gov home.</span></a>
+           	</li>
+        	<li>
+            	<a id="eohhs_link" href="http://mass.gov/eohhs" target="_blank"><span class="offscreen">Go to Executive Office of Health and Human Services (EOHHS) home.</span></a>
+        	</li>
+
+        	<li>
+            	<a class="skip-navigation" href="#maincontent">Skip to main content</a>
+        	</li>
+    	</ul>
+
+ <div class="container">
+
+ <!-- ===================================================== -->
+ 	<header>
+
+          <h1 id="dph_logo">
+          	<a class="dph_seal" href="http://www.mass.gov/eohhs/gov/departments/dph/">
+              <img src="/images/logo_dph_seal.gif" alt="Massachusetts Department of Public Health seal" />            
+          	</a>
+          	<a class="tracking_app" href="/index.html">
+              Massachusetts Environmental <span>Public Health Tracking</span>
+            </a>
+          </h1>
+          <div class="search-box" role="search" >
+              <div>
+              <script>
+  (function() {
+    var cx = '016967530086184478348:cdnjmbpvtfa';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only resultsUrl="/results.html"></gcse:searchbox-only>
+              <!--
+              <form action=
+                "/results.html" id="cse-search-box">
+  
+    <input type="hidden" name="cx" value="004215140630209070071:9mru-4coc_a" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" title="Text to be searched" name="q" value="Search" style="width: 145px" />
+    <input type="submit" name="sa" value="Go" />
+  
+</form>
+-->
+
+
+</div>
+<!--
+              <script>
+  (function() {
+    var cx = '016967530086184478348:cdnjmbpvtfa';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<gcse:search></gcse:search>   --> 
+              </div>
+
+	<!-- BING SEARCH
+
+<form method="get" action="/results.html" class="search-box" >
+  <label for="search_text" class="offscreen">Search</label>
+  <input type="search" id="search_text" name="q" results="10" autosave="10" placeholder="Search&hellip;" />
+  <button type="submit">Search</button>
+  <div role="radiogroup">
+  <label for="web"><input type="radio" id="web" name="q1" value="" />&nbsp;The Web</label>
+  <label for="website"><input type="radio" id="website" name="q1" value="site:https:matracking.ehs.state.ma.us" checked />&nbsp;This Site</label>
+  </div>
+</form>
+-->
+<!--http://www.bing.com/developers/s/APIBasics.html-->
+<!--To make this work: https://kb.yoast.com/kb/how-to-connect-your-website-to-bing-webmaster-tools/-->
+
+	<!-- navigation -->
+	  <!-- <button id="nav-toggle" class="nav-toggle">Open menu</button> -->
+      <nav class="nav-collapse nav-collapse-0 closed multiple-level-nav" id="nav">
+        <ul class="menu-items">
+          <li><a href="/index.html">Home</a></li>
+
+          <li class="dropdown" aria-haspopup="true">
+            <a href="/EPHT_Program/index.html" class="has-dropdown">About</a>
+            <ul class="sub-menu">
+              <li><a href="/National_EPHT_Program/index.html">National EPHT Program</a></li>
+              <!--
+              <li><a href="https://www.youtube.com/watch?v=9BVydjpKRH8" target="_blank">EPHT In Action</a></li>
+              -->
+              <li><a href="/success-stories/index.html">Success Stories</a></li>
+              <li><a href="/reports-and-outreach.html">Reports & Outreach Materials</a></li>
+			  <li><a href="/howtouse.html">How to Use Tracking</a></li>
+<!--              <li><a href="/tutorial.html">Tutorial</a></li>-->
+<!--              <li><a href="http://www2c.cdc.gov/podcasts/player.asp?f=8624028" target="_blank">Nurses &amp; Tracking Network Podcast</a></li>-->
+<!--              <li><a href="http://nehacert.org/moodle/course/category.php?id=41" target="_blank">Tracking-related Online Training</a></li>-->
+              <li><a href="/Links/index.html">Related Links</a></li>
+              <li><a href="/Metadata/index.html">About Our Data</a></li>
+              <li><a href="/Glossary/index.html">Glossary</a> </li>
+              <li><a href="/Contact_Us/index.html">Contact Us</a></li>
+              <li><a href="/whats-new.html">Website Updates</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown" aria-haspopup="true">
+            <a href="/Health-Data/index.html" class="has-dropdown">Health</a>
+            <ul class="sub-menu">
+              <li><a href="/Health-Data/ALS.html">ALS</a></li>
+              <li><a href="/Health-Data/Asthma/index.html">Asthma</a></li>
+              <li><a href="/Health-Data/Birth-Defects.html">Birth Defects</a></li>
+              <li><a href="/Health-Data/Cancer/index.html">Cancer</a></li>
+              <li><a href="/Health-Data/Carbon-Monoxide-Poisoning.html">Carbon Monoxide</a></li>
+              <li><a href="/Health-Data/Childhood_Blood_Lead_Levels.html">Childhood Lead Poisoning</a></li>
+              <li><a href="/Health-Data/Heart_Attack_Hospitalization.html">Heart Attack</a></li>
+              <li><a href="/Health-Data/heat-stress-hospitalization.html">Heat Stress</a></li>
+              <li><a href="/Health-Data/diabetes-pediatric.html">Pediatric Diabetes</a></li>
+              <li><a href="/Health-Data/Reproductive-Outcomes/index.html">Reproductive Outcomes</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown" aria-haspopup="true">
+            <a href="/Environmental-Data/index.html" class="has-dropdown">Environment</a>
+            <ul class="sub-menu">
+              <li><a href="/Environmental-Data/Air-Quality/index.html">Air Quality</a></li>
+              <li><a href="/Climate-Change/index.html">Climate Change</a></li>
+              <li><a href="/Environmental-Data/Water-Quality/index.html">Drinking Water</a></li>
+              <li><a href="/planning_and_tools/exposures/index.html">Exposures</a></li>
+              <li><a href="/Environmental-Data/radon/index.html">Radon</a></li>
+              <li><a href="/Environmental-Data/recreational-water/index.html">Recreational Water</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown" aria-haspopup="true">
+            <a href="/Inspections/index.html" class="has-dropdown">Inspections &amp; Licenses</a>
+            <ul class="sub-menu">
+              <li><a href="/Inspections/Food-Protection/index.html">Food Processing Inspections</a></li>
+              <li><a href="/Inspections/lead-inspection.html">Lead Inspection</a></li>
+              <li><a href="/Inspections/Mammography/index.html">Mammography</a></li>
+            </ul>
+          </li>
+          <li class="dropdown" aria-haspopup="true">
+          	<a href="/planning_and_tools/index.html" class="has-dropdown">Planning &amp; Tools</a>
+            <ul class="sub-menu">
+            <li>
+                <a href="https://www.atsdr.cdc.gov/safeplacesforECE/index.html" target="_blank">Places for Early Care and Education</a>
+                </li>
+                <li><a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=/content/folder[@name=%27MEPHTN%27]/folder[@name=%27Community%27]/report[@name=%27community-profile%27]&ui.name=community-profile&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank">Community Profiles</a></li>
+            	<li><a href="/planning_and_tools/hia/index.html">Health Impact Assessment</a></li>
+                <!--
+                <li>
+                <a href="/planning_and_tools/index.html#HHG">Healthy Home Guide</a>
+                </li>   -->
+            </ul>
+          </li>
+
+          <!--
+          <li class="toplast"><a href="/logon.html" style="height:18px;line-height:18px;">Secure Data Gateway</a></li>
+          -->
+
+        </ul>
+      </nav>
+
+</header>
+<article id="maincontent">
+<!-- InstanceBeginEditable name="Explore1" -->
+<div id="Explore1">
+<table width="100%" class="data-button">
+<tr>
+<td width="70%" class="full">
+<h2>
+	Arsenic
+</h2>
+</td>
+<td width="30%" class="full">
+    <div id="sticky-anchor"></div>
+    <div id="maps_and_tables">
+    <a class="ma__button-minor-green ma__button--small" href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27environmental%27%5d%2freport%5b%40name%3d%27drinking-water%27%5d&ui.name=drinking-water&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank">
+      Explore Maps <span class="amp">&amp;</span> Tables
+    </a>
+    </div> 
+</td>
+</tr>
+</table>
+</div>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Content" -->
+<div class="content">
+
+
+<ul class="inner_nav">
+  <li><a href="index.html">Drinking Water</a></li>
+  <!-- <li><a href="arsenic.html">Arsenic</a></li> -->
+  <li><a href="atrazine.html">Atrazine</a></li>
+  <li><a href="dehp.html">DEHP</a></li>
+  <li><a href="disinfection.html">Disinfection Byproducts</a></li>
+  <li><a href="lead.html">Lead</a></li>
+  <li><a href="nitrate.html">Nitrate</a></li>
+  <li><a href="pce.html">PCE</a></li>
+  <li><a href="tce.html">TCE</a></li>
+  <li><a href="uranium.html">Uranium</a></li>
+  <li>
+      <a href="/Environmental-Data/Water-Quality/Drinking-Water-FAQ.html#Ars">FAQs</a>
+  </li>
+  <li>
+      <a href="/Links/index.html#DrinkingWater">Related Links</a>
+  </li>
+</ul>
+
+
+<p>
+Arsenic is a toxic chemical that occurs naturally in the Earth's crust in soil, rocks, and minerals.  Arsenic is also a byproduct of some agricultural and industrial activities.  It is used with other chemicals to preserve wood  as a pesticide for certain agricultural crops. Arsenic can enter the drinking  water supply from natural sources in the Earth. It can also enter drinking  water through discharge from industries where it is manufactured or used. Once  it enters the environment, arsenic remains for a long time. There is wide variation in the levels of arsenic found in drinking water systems and private water supplies across the country.
+</p>
+ 
+<p>
+Some people who drink water containing arsenic in excess of the U.S. Environmental Protection Agency's (U.S. EPA) Maximum Contaminant Level (MCL) over many years could experience skin damage or problems with their circulatory system, and may have an increased risk of getting cancer. 
+</p>
+
+<p> 
+The MCL for arsenic is 10ug/L.
+</p>
+
+<dl class="did_you_know">
+<dt>
+	Did You Know?
+</dt>
+<dd>
+  Naturally high concentrations of arsenic in the  Earth&rsquo;s crust occur in parts of the U.S. including  areas of central Massachusetts.
+</dd>
+</dl>
+
+
+ 
+<p>
+  Specific health effects of arsenic exposure may include:
+</p>
+
+<ul>
+    <li>Thickening and discoloration of the skin, stomach pain, nausea, vomiting, diarrhea, and liver effects</li>
+    <li>Cardiovascular, pulmonary, immunological, neurological (e.g., numbness and partial paralysis), and reproductive and endocrine (e.g., diabetes) effects</li>
+    <li>Cancer of the bladder, lung, skin, kidney, nasal passages, liver, and prostate</li>
+</ul>
+
+<p>
+The majority of health risks from arsenic exposure in the United States are from long term exposures. Although short term exposures to high doses cause adverse effects in people, such exposures do not occur from public water supplies in the U.S. that comply with the arsenic Maximum Contaminant Level (MCL). A high dose is about a thousand times higher than the drinking water standard.
+</p>
+
+  
+
+<dl class="data_c toggle">
+  <dt>
+    Data Considerations
+  </dt>
+  <dd>
+    <p>
+      When reviewing and interpreting drinking water arsenic  data, it is important to take into consideration the following:
+    </p>
+    <ul>
+      <li>The data presented are for public water systems only. Residents may have exposure to arsenic from private well water.</li>
+      <li>Exposure to arsenic in drinking water depends upon the concentration of arsenic in the drinking water and the amount of water consumed by the individual.  Water consumption varies by such factors as climate and level of physical activity.</li>
+      <li>Many factors can affect whether exposure can lead to a health problem, including level of contamination, amount of water consumed, and the length of time water was contaminated.  Some populations may be more susceptible to health problems following exposure, such as pregnant woman, children, and immune suppressed individuals.</li>
+      <li>This website provides a summary of drinking water violations by community.  Consumer Confidence Reports on public drinking water quality are required to be provided annually to consumers.  Your Community Water System should be contacted for this report, which will provide more detailed information on any specific water system violations. </li>
+      <li>Community Water Systems (CWSs) can serve areas substantially beyond the boundaries of the principal city/town. served</li>
+      <li>Multiple CWSs can serve the same city/town and multiple cities/towns can be served by a single. </li>
+      <li>For a list of all Massachusetts Community Water Systems and communities serverd, with attributes, <a href="/Environmental-Data/Water-Quality/PWS_2013.pdf">click  here (pdf)</a>. </li>
+    </ul>
+    <p>
+    <a href="Drinking-Water-FAQ.html#Ars">For additional information, please read the FAQ.</a>
+    </p>
+  </dd>
+</dl>
+
+<dl class="avail_data toggle">
+  <dt>
+    Available Data on  Water Quality Measures for Arsenic
+  </dt>
+  <dd>
+    <p>
+      Click the <a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27environmental%27%5d%2freport%5b%40name%3d%27drinking-water%27%5d&ui.name=drinking-water&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank">Explore Maps & Tables</a> button on this page to access the following measures for arsenic in your community. The most current available data will be shown. Be sure to check the site periodically as new data are added each year.
+    </p>
+    <p>
+      To protect privacy, no information is shown that could identify an individual home or family.
+    </p>
+    
+    <ul>
+      <li>Maximum arsenic concentration by number of Community Water Systems and year of testing</li>
+      <li>Mean arsenic concentration by number of Community Water Systems and year of testing</li>
+      <li>Maximum arsenic concentration by number of people served by the Community Water Systems and year of testing</li>
+      <li>Mean arsenic concentration by number of people served by the Community Water Systems and year of testing</li>
+      <li>Mean arsenic concentration by individual Community Water System or county and year of testing</li>
+      <li>Drinking water violations by Community Water  System or community and year of violation</li>
+    </ul>
+  </dd>
+</dl>
+
+    <!-- end arsenic -->
+</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Explore" -->
+<div id="explore">
+<span id="maps_and_tables2">
+    <a class="ma__button-minor-green ma__button--small_float" href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27environmental%27%5d%2freport%5b%40name%3d%27drinking-water%27%5d&ui.name=drinking-water&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank">
+      Explore Maps <span class="amp">&amp;</span> Tables
+    </a>
+    </span>
+    </div>
+    <!-- InstanceEndEditable -->
+<footer class="footer">
+
+<a class="feedback" href="http://mdph.checkboxonline.com/MEPHTN-Feedback.aspx" target="_blank">Give Us Feedback</a>
+
+	<ul id="footer_links">
+    	<li>
+          <a href="/Contact_Us/index.html">Contact Us</a>
+    	</li>
+    	<li>
+          <a href="/disclaimer.html">Disclaimer</a>
+    	</li>
+    	<li>
+          <a href="/credits.html">Credits</a>
+    	</li>
+    	<li>
+          <a href="/whats-new.html">Website Updates</a>
+    	</li>
+       	<li>
+          <a href="/Viewing.html">Portal Viewing Tips</a>
+    	</li>
+    	<li>
+          <a href="/logon.html">Secure Data Gateway</a>
+    	</li>
+    	<li>
+          <a href="/tutorial.html">Tutorial</a>
+    	</li>
+      </ul>
+  
+  
+<p>
+	This site is provided by <a target="_blank" href="http://www.mass.gov/eohhs/gov/departments/dph/programs/environmental-health">Massachusetts Department of Public Health - Bureau of Environmental Health</a>
+</p>
+
+<p class="copyright">
+	&copy;<script type="text/javascript">document.write((new Date()).getFullYear());</script>&nbsp; Commonwealth of Massachusetts
+</p>
+
+<p class="adobe_reader">
+  <a href="http://get.adobe.com/reader/">
+    <img src="/images/get_adobe_reader_4.jpg" alt="Click to download Adobe Reader" longdesc="http://get.adobe.com/reader/"/>
+  </a>
+</p>
+   
+  <div id="social-media">
+    <div class="social">
+    	<a href="http://www.cdc.gov/nceh/tracking" target="_blank" class="ntl_prtnr">
+        	<img src="/images/cdc_logo.png" alt="logo for the National State Partner of the Environmental Public Health Tracking Program" />
+        </a>
+    	<a href="https://twitter.com/MassDPH" target="_blank"><img src="/images/twitter-icon.png" alt="Twitter Icon" /></a>
+        <a href="http://www.linkedin.com/company/massachusetts-department-of-public-health?goback=.fcs_GLHD_massachusetts+department+of+public+health_false_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2&amp;trk=top_nav_home" target="_blank"><img src="/images/linkedin.png" alt="LinkedIn Icon" /></a>
+		<a href="http://www.youtube.com/user/MassDPH" target="_blank"><img src="/images/youtube.png" alt="Youtube Icon" /></a>
+    </div>
+  </div>
+    
+    <p class="GreyOrge offscreen"><a href="http://www.mass.gov/eohhs/utility/eohhs-site-policies.html" target="_blank">Site Policies</a> <a href="/help-desk.html">Helpdesk</a> </p>
+
+</footer>
+
+</article>
+</div>
+</div>
+
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<!--  Start of Feedback survey Side link -->
+<script type="text/javascript">
+// var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+// document.write(unescape("%3Cscript src='" + cfJsHost + "dflzqrzibliy5.cloudfront.net/includes/tinybox/tinybox.js?6512' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<link href="/css/tinyboxstyle.css" rel="stylesheet" type="text/css"  />
+
+<!--  End of Feedback survey Side link -->
+
+
+<!--  Start of Feedback survey pop-up lightbox -->
+<script type="text/javascript">
+// var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+// document.write(unescape("%3Cscript src='" + cfJsHost + "dflzqrzibliy5.cloudfront.net/includes/tinybox/tinybox.js?6512' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+// setTimeout(function(){TINY.box.show({iframe:'https://mdph.checkboxonline.com/MEPHTN-Feedback.aspx',boxid:'frameless',width:900,height:490,fixed:false,maskid:'bluemask',maskopacity:40}) },400000);
+</script>
+
+<!--  End of Feedback survey pop-up lightbox -->
+
+
+<!-- start Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51972523-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<!--  end Google Analytics -->
+
+<script>
+  var nav = responsiveNav(".nav-collapse");
+</script>
+
+</body>
+<!-- InstanceEnd --></html>
