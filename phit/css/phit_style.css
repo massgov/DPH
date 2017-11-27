@@ -34,6 +34,7 @@ width:28%;
 border:none;
  max-width:1000px;
  min-width:325px;
+ background-color: #ffffff;
  }	
  #phit_landing tr td .phit_col tr td{
  font-family: "Arial Black", Gadget, sans-serif;
