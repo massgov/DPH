@@ -100,7 +100,7 @@ border:none;
 	max-width:none;
 }
 
-@media only screen and (min-width:753px){
+@media only screen and (min-width:780px){
 #phit_landing tr td .phit_col tr td{
 	font-size: 16px;	
 }
@@ -120,7 +120,7 @@ border:none;
 	width:240px;
 }
 }
-@media only screen and (min-width:500px) and (max-width:752px) 
+@media only screen and (min-width:500px) and (max-width:779px) 
  {
 #phit_landing tr td .phit_col tr td {
 	font-size: 14px;	
