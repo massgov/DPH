@@ -35,6 +35,7 @@ border:none;
  max-width:1000px;
  min-width:325px;
  background-color: #ffffff;
+padding;15px:
  }	
  #phit_landing tr td .phit_col tr td{
  font-family: "Arial Black", Gadget, sans-serif;
@@ -81,7 +82,9 @@ border:none;
 	margin-left: auto;
     margin-right: auto;
 	width: 100%;
-	padding-top:25px;	
+	/*
+	padding-top:25px;
+	*/
 }
 #phit_landing tr #col1 .phit_col tr td img {
 	width: 35px;
