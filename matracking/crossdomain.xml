@@ -1,0 +1,4 @@
+<cross-domain-policy>
+    <allow-access-from domain="matracking.ehs.state.ma.us" />
+    <allow-http-request-headers-from domain="matracking.ehs.state.ma.us" headers="*"/>
+</cross-domain-policy>
