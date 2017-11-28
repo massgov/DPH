@@ -1,0 +1,58 @@
+{
+	"template":"Single Map (HTML Edition)",
+	"version":"6.8.0_b1,942 (2017-03-02 1454)",
+	"boundingBox":"-8202816.0475 5035142.357 -7764419.6825 5307118.523",
+	"layers":[
+	{
+		"type":"base-layer",
+		"id":"_Tracts_wCCV.shp1",
+		"name":"Tracts_wCCV.shp",
+		"geometry":"polygon",
+		"url":"_Tracts_wCCV.shp1.js",
+		"visible":true,
+		"symbolSize":15,
+		"fillColor":"#ffffff",
+		"fillOpacity":0.8,
+		"borderColor":"#cccccc",
+		"borderThickness":1,
+		"showLabels":false,
+		"minLabelExtent":0,
+		"maxLabelExtent":1000000,
+		"iconPath":"",
+		"showDataTips":true,
+		"showInLayerList":true
+	},
+	{
+		"type":"contextual-layer",
+		"id":"contextualLayer1",
+		"name":"Towns_wCCV.shp",
+		"geometry":"polygon",
+		"url":"contextualLayer1.js",
+		"visible":true,
+		"symbolSize":10,
+		"fillColor":"#FFA200",
+		"fillOpacity":0,
+		"borderColor":"#FFA200",
+		"borderThickness":1,
+		"showLabels":false,
+		"minLabelExtent":0,
+		"maxLabelExtent":1000000,
+		"iconPath":"",
+		"showDataTips":false,
+		"showInLayerList":true
+	},
+	{
+		"type":"ags-layer",
+		"id":"wms-1095857536",
+		"name":"",
+		"geometry":"image",
+		"visible":true,
+		"url":"https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/Basemaps/Base_Streets_with_Labels/MapServer/export?",
+		"layers":"0",
+		"srs":"102100",
+		"params":"",
+		"tile":false,
+		"showInLayerList":true
+	}
+	]
+}
