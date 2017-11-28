@@ -132,7 +132,7 @@ BORDER-RIGHT: #e7e7ef thin solid; BORDER-TOP: #e7e7ef thin solid; FONT-SIZE:
 10px; BORDER-LEFT: #e7e7ef thin solid; BORDER-BOTTOM: #e7e7ef thin solid; 
 FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #e7e7ef } TD { 
 FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif } TD.dateColumn { 
-BACKGROUND-IMAGE: url(../images/navigation/date_bg.jpg) } TD.featureStory { 
+BACKGROUND-IMAGE: url(/images/navigation/date_bg.jpg) } TD.featureStory { 
 FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial, Helvetica, sans-serif } 
 TD.findInfo { FONT-SIZE: 10px; COLOR: #004584; FONT-FAMILY: Arial, Helvetica, 
 sans-serif; BACKGROUND-COLOR: #fff3de } TD.findInfoHeader { BACKGROUND-COLOR: 
@@ -146,6 +146,6 @@ TD.moduleHeader { BACKGROUND-COLOR: #bdcbde } TD.stateGovColumn { BORDER-RIGHT:
 #bdc7de thin solid; FONT-SIZE: 10px; BORDER-LEFT: #bdc7de thin solid; 
 FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #bdc7de } 
 TD.secdesc { COLOR: #0b265d } TD.SpecialModuleHeader { BACKGROUND-COLOR: #e79a42 
-} UL { LIST-STYLE-IMAGE: url(../images/navigation/blue_bullet.gif) } SPAN { 
+} UL { LIST-STYLE-IMAGE: url(/images/navigation/blue_bullet.gif) } SPAN { 
 BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px } 
 </BODY></HTML>
