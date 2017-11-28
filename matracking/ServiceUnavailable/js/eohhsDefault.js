@@ -20,13 +20,13 @@ sTempSrc); } } } } /* * The following functions are used to expand and retract
 the State * Government Menu specifically. */ function Toggle(item) { 
 obj=document.getElementById(item); visible=(obj.style.display!="none") 
 key=document.getElementById("x" + item); if (visible) { 
-obj.style.display="none"; key.innerHTML="<img src="https://massgov.github.io/DPH/matracking" border=0>"; } else { 
-obj.style.display="block"; key.innerHTML="<img src="https://massgov.github.io/DPH/matracking" border=0>"; 
+obj.style.display="none"; key.innerHTML="<IMG src="" border=0>"; } else { 
+obj.style.display="block"; key.innerHTML="<IMG src="" border=0>"; 
 HideAllElse(item); } } function ToggleExec() { 
 obj=document.getElementById("executive"); visible=(obj.style.display!="none"); 
 key=document.getElementById("xexecutive"); if (visible) { 
-obj.style.display="none"; key.innerHTML="<img src="https://massgov.github.io/DPH/matracking" border=0>"; } else { 
-obj.style.display="block"; key.innerHTML="<img src="https://massgov.github.io/DPH/matracking" border=0>"; } } function 
+obj.style.display="none"; key.innerHTML="<IMG src="" border=0>"; } else { 
+obj.style.display="block"; key.innerHTML="<IMG src="" border=0>"; } } function 
 Expand() { divs=document.getElementsByTagName("DIV"); for 
 (i=0;i<DIVS.LENGTH;I++) appversion="parseInt(navigator.appVersion);" && 
 ?Netscape? (appname="=" if var appname="navigator.appName;" ;} 
