@@ -289,7 +289,7 @@ article #landing-mobile ul li:last-of-type {
 }
 */
 article #landing-mobile ul li a {
-	background: url(../images/leaves/welcome.png) 0 50% no-repeat;
+	background: url(/images/leaves/welcome.png) 0 50% no-repeat;
 	color:#ffffff;
 	display: block;
 	font-size: 11px;
@@ -310,25 +310,25 @@ article #landing-mobile ul li a:active {
 }
 
 article #landing-mobile li a#ntlepht { 
-	background-image: url(../images/leaves/ntlepht.png);
+	background-image: url(/images/leaves/ntlepht.png);
 }
 article #landing-mobile li a#healthdata { 
-	background-image: url(../images/leaves/healthdata.png);
+	background-image: url(/images/leaves/healthdata.png);
 }
 article #landing-mobile li a#environdata { 
-	background-image: url(../images/leaves/environdata.png);
+	background-image: url(/images/leaves/environdata.png);
 }
 article #landing-mobile li a#inspections { 
-	background-image: url(../images/leaves/ntlepht.png);
+	background-image: url(/images/leaves/ntlepht.png);
 }
 article #landing-mobile li a#climatechg { 
-	background-image: url(../images/leaves/climatechg.png);
+	background-image: url(/images/leaves/climatechg.png);
 }
 article #landing-mobile li a#commprofile { 
-	background-image: url(../images/leaves/commprofile.png);
+	background-image: url(/images/leaves/commprofile.png);
 }
 article #landing-mobile li a#maepht { 
-	background-image: url(../images/leaves/ntlepht.png);
+	background-image: url(/images/leaves/ntlepht.png);
 }
 
 article #landing-large {
@@ -675,7 +675,7 @@ dl dd cite {
 }
 
 #topics dl dt {
-	background-image:url(../images/leaf.svg);
+	background-image:url(/images/leaf.svg);
 	background-position:5px 7px;
 	background-repeat:no-repeat;
 	background-size: 23px;
@@ -1105,7 +1105,7 @@ a.ma__button-minor-green {
 
 a.comm_profile {
 	background:rgba(7,69,154,.1);
-	background: url(../images/Massachusetts.png) center 1.6rem no-repeat;
+	background: url(/images/Massachusetts.png) center 1.6rem no-repeat;
 	/* border:thin solid rgba(7,69,154,.08); */
 /*	border:thin solid rgba(153,202,60,1);*/
 	background-size: 70%;

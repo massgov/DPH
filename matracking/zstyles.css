@@ -365,7 +365,7 @@ dl dd cite {
 }
 
 #topics dl dt {
-	background-image:url(../images/leaf.svg);
+	background-image:url(/images/leaf.svg);
 	background-position:5px 7px;
 	background-repeat:no-repeat;
 	background-size: 23px;
