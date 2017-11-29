@@ -7,7 +7,7 @@
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Massachusetts Environmental Public Health Tracking</title>
+<title>Vulnerable Residents and Areas</title>
 <!-- InstanceEndEditable -->
 
 <link rel="stylesheet" href="/css/styles.css" type="text/css" />
@@ -296,228 +296,167 @@ $(function() {
 
 </header>
 <article id="maincontent">
-<!-- InstanceBeginEditable name="Explore1" --><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Explore1" -->
+
+<!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="Content" -->
-<div class="content" id="welcome">
-<h2 class="offscreen">
-  Welcome
+<div class="content">
+<h2>
+Vulnerable Residents and Areas
 </h2>
 
+<ul class="inner_nav">
 
-<div id="landing-mobile">
-	<ul>
-<!--
-		<li>
-			<a href="index.html" id="welcome">Welcome</a>
-		</li>
--->
-		<li>
-			<a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=/content/folder[@name='MEPHTN']/folder[@name='Community']/report[@name='community-profile']&ui.name=community-profile&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank" id="commprofile">Community Profile</a>
-		</li>
-		<li>
-			<a href="EPHT_Program/index.html" id="ntlepht">Massachusetts EPHT Program</a>
-		</li>
-		<li>
-			<a href="Health-Data/index.html" id="healthdata">Health Data</a>
-		</li>
-		<li>
-			<a href="Environmental-Data/index.html" id="environdata">Environmental Data</a>
-		</li>
-		<li>
-			<a href="Inspections/index.html" id="inspections">Inspections</a>
-		</li>
-		<li>
-			<a href="Climate-Change/index.html" id="climatechg">Climate Change</a>
-		</li>
-		<li>
-			<a href="National_EPHT_Program/index.html" id="maepht">National EPHT Program</a>
-		</li>
-		<li>
-			<a href="planning_and_tools/index.html" id="pnt">Planning &amp; Tools</a>
-		</li>
+  <li> <a href="/Climate-Change/index.html">Climate Change Overview</a></li>
+  <li> <a href="/Climate-Change/climate_and_health_profile.html">Climate and Health Profiles</a></li>
+  <li> <a href="/Climate-Change/conceptual-pathways.html">Climate and Health Pathways</a></li>
+<!--  <li> <a href="/Climate-Change/vulnerable-populations.html">Vulnerable Populations</a></li>-->
+  <li> <a href="climate_change_faq.html">FAQs</a></li>
+  <li> <a href="/Links/index.html#ClimateChange">Related Links</a></li>
+</ul>
+
+<p>
+	Certain populations are particularly vulnerable to changing climate effects. The term "vulnerable populations" refers to people or groups that may be more susceptible to the health effects of climate change.  Vulnerability to climate change varies across time and location, across communities, and among individuals within communities.  People and communities differ in their exposures, their inherent sensitivity, and their capacity to respond to, adapt to and cope with climate change related health impacts. This is summarized in the figure below.
+</p>
+
+<p>
+<!--	<img src="../images/vulnerable_populations.png" alt="chart of factors leading to vulnerable population health impacts" longdesc="vulnerable_populations" style="max-width:700px;" />-->
+	<div id="vulnerable_populations">
+	<style>
+		#vulnerable_populations { margin: 1rem auto 2rem auto; max-width: 600px; width: 95%; }
+		#vulnerable_populations h4 { font-size: 1.15rem; }
+		#vulnerable_populations dfn { font-size: .8rem; text-align: center; }
+		#vulnerable_populations ul { list-style: none; margin: 0 auto; padding: 0; width:100%; }
+		#vulnerable_populations ul li { background:#1B5570; color:#ffffff; display: inline-block; font-size: .8rem; margin:0; min-height: 320px; padding: 10px .5rem; position: relative; vertical-align: top; width: 27%; }
+		#vulnerable_populations  ul li.vulnerability { background: #2e0B2c; color:#ffffff; display: block; margin: .5rem 0; min-height: 75px; padding:10px 2px; position: relative; text-align: center; width:95%;}
+		#vulnerable_populations .vulnerability dfn { display: inline; }
+		
+		#vulnerable_populations .arrow-down { margin: 1rem auto .2rem auto; position: absolute; bottom: .5rem; right:45%; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #f6f6f6; }
+		#vulnerable_populations .health_impacts { background:#ffffff; border:2px solid #185570; color:#185570; display: block; margin:0; padding: 10px 2px; text-align: center; width: 94%; }
+		@media screen and (min-width:600px) {
+				#vulnerable_populations ul li { line-height: 1.5; min-height: 225px; width:28.5%; }
+			}
+		</style>
+		<h4>
+			Factors leading to vulnerable population health impacts
+		</h4>
+		<ul>
+			<li>
+				<dfn>
+					Exposure
+				</dfn>
+				Exposure is contact between a person and one or more biological, psychosocial, chemical, or physical stressors, including stressors affected by climate change.
+				<div class="arrow-down"></div>
+			</li>
+			<li>
+				<dfn>
+					Sensitivity
+				</dfn>
+				Sensitivity is the degree to which people or communities are affected, either adversely or beneficially, by climate variability or change.
+				<div class="arrow-down"></div>
+			</li>
+			<li>
+				<dfn>
+					Adaptive Capacity
+				</dfn>
+				Adaptive capacity is the ability of communities, institutions, or people to adjust to potential hazards, to take advantage of opportunities, or to respond to consequences.
+				<div class="arrow-down"></div>
+			</li>
+	
+			<li class="vulnerability">
+				<span class="offscreen">These are three impacts to the </span><dfn>vulnerability</dfn> of human health to climate change.
+				<div class="arrow-down"></div>
+			</li>
 		</ul>
-</div>
-
-<div id="landing-large">
-
-<img src="images/2017splash.png" alt="Landing page graphic with leaf as links" usemap="#splash" height="565" width="892" />
-<map name="splash">
-  <area alt="landing page graphic of tree with large leaves linking to pages of the site" shape="rect" coords="374,41,445,164" href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=/content/folder[@name='MEPHTN']/folder[@name='Community']/report[@name='community-profile']&ui.name=community-profile&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank">
-  <area alt="leaf linking to the National EPHT Program" shape="rect" coords="231,138,334,214" href="National_EPHT_Program/index.html">
-  <area alt="leaf linking to Health Data" shape="rect" coords="210,267,315,330" href="Health-Data/index.html">
-  <area alt="leaf linking to Environmental Data" shape="rect" coords="266,366,389,442" href="Environmental-Data/index.html">
-  <area alt="leaf linking to Inspections Data" shape="rect" coords="446,392,516,466" href="Inspections/index.html">
-  <area alt="leaf linking to Climate Change Data" shape="rect" coords="577,287,701,363" href="Climate-Change/index.html">
-  <area alt="leaf linking to Planning and Tools" shape="rect" coords="577,179,703,248" href="planning_and_tools/index.html">
-  <area alt="leaf linking to EPHT Program" shape="rect" coords="516,84,624,167" href="EPHT_Program/index.html">
-</map>
-
-</div>
-
-<script>
-	$('img[usemap]').rwdImageMaps();
-</script>
-
-<h3>
-Community Profiles
-</h3>
-<p>
-<a class="addl_content" href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=/content/folder[@name=%27MEPHTN%27]/folder[@name=%27Community%27]/report[@name=%27community-profile%27]&ui.name=community-profile&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank">Community Profile</a> 
-
-The Community Profile brings together important health, environmental and community indicators, providing a snapshot of environmental health for each of Massachusetts&rsquo; 351 communities. The Community Profile is linked to our EPHT database, so that it always includes the most up-to-date data available.
-
-<h3>
-Maps <span class="amp">&amp;</span> Tables
-</h3>
-<p>
-  A key feature of this website is that you can make tables, charts, and maps of environmental and health data for the community that you live in. This website also provides important background information including limitations associated with the data. It is important to stress that the data cannot be used to determine the cause of disease. They can be used to identify areas where public health actions can be taken. Access Maps <span class="amp">&amp;</span> Tables and Community Profiles using the links at the top of each page.
-</p>
-
-<p>
-The MA EPHT Portal includes the latest available data for:
-</p>
-
-	<div id="topics">
-      <dl>
-          <dt>
-              <a href="/Health-Data/index.html">Health</a>
-          </dt>
-          <dd>
-              <a href="/Health-Data/ALS.html">ALS</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/Asthma/index.html">Asthma</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/Birth-Defects.html">Birth Defects</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/Cancer/index.html">Cancer</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/Carbon-Monoxide-Poisoning.html">Carbon Monoxide Poisoning</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/Childhood_Blood_Lead_Levels.html">Childhood Lead Poisoning</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/Heart_Attack_Hospitalization.html">Heart Attack</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/heat-stress-hospitalization.html">Heat Stress</a>
-          </dd>
-          <dd>
-              <a href="/Health-Data/diabetes-pediatric.html">Pediatric Diabetes</a>
-          </dd>
-      
-          <dd>
-              <a href="/Health-Data/Reproductive-Outcomes/index.html">Reproductive Outcomes</a>
-          </dd>
-      </dl>
-      <dl>
-          <dt>
-              <a href="/Environmental-Data/index.html">Environment</a>
-          </dt>
-          <dd>
-              <a href="/Environmental-Data/Air-Quality/index.html">Air Quality</a>
-          </dd>
-          <dd>
-              <a href="/Climate-Change/index.html">Climate Change</a>
-          </dd>
-          <dd>
-              <a href="/Environmental-Data/Water-Quality/index.html">Drinking Water Quality</a>
-          </dd>
-          <dd>
-              <a href="/Environmental-Data/radon/index.html">Radon</a>
-          </dd>
-          <dd>
-              <a href="/Environmental-Data/recreational-water/index.html">Recreational Water</a>
-          </dd>
-<!--      </dl>-->
-<!--      <dl>-->
-<!--          <dt>-->
-<!--              <a href="/Climate-Change/index.html">Climate Change</a>-->
-<!--          </dt>-->
-          <dd>
-              <a href="http://maps.massgis.state.ma.us/map_ol/cc_vuln.php">Vulnerable Populations</a>
-          </dd>
-      </dl>
-      <dl>
-          <dt>
-              <a href="/Inspections/index.html">Inspections</a>
-          </dt>
-          <dd>
-              <a href="/Inspections/Food-Protection/index.html">Food Protection</a>
-          </dd>
-          <dd>
-              <a href="/Inspections/lead-inspection.html">Lead Inspections</a>
-          </dd>
-          <!--
-          <dd>
-              <a href="/Inspections/Mammography/index.html">Mammography</a>
-          </dd>
-          -->
-      </dl>
+		<p class="health_impacts">
+			<dfn>
+				Health Impacts
+			</dfn>
+			Injury, acute and chronic illness (including mental health and stress-related illness), developmental issues, and death
+		</p>
 	</div>
-
-<blockquote aria-labelledby="gerberding">
-&hellip;linking environmental and health data enables a timely response to potential public health problems related to the environment
-<cite id="gerberding">Former CDC Director Dr. Julie L. Gerberding</cite>
-</blockquote>
-
-<dl id="whats_new" style="display: none;">
-	<dt>
-    	<a href="whats-new.html">What&rsquo;s New on MA EPHT</a>
-    </dt>
-
-	<dd>
-    	<dfn><a href="whats-new.html">February 25, 2017</a></dfn>
-        Check out our new <a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&amp;ui.action=run&amp;ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27health%27%5d%2freport%5b%40name%3d%27Lead_Screening_Progress_Report%27%5d&amp;ui.name=Lead_Screening_Progress_Report&amp;run.outputFormat=PDF&amp;run.prompt=true&amp;cv.header=false&amp;cv.toolbar=false" target="_blank">Childhood Lead Screening Community Progress Report</a>! View community-specific indicators of childhood lead screening and exposure, as well as information and resources to help keep children safe from lead exposure.
-    </dd>
-    <dd>
-      <dfn><a href="whats-new.html">February 20, 2017</a></dfn>
-      Since our portal release in July of 2014, the EPHT team has been constantly working to improve performance and enhance EPHT's system capabilities to best fit the needs of local health stakeholders. <a href="https://attendee.gotowebinar.com/register/1259972534546115076" target="_blank">This webinar</a>, titled &ldquo;Local Health Tracking ? Exploring the Environmental Public Health Tracking Portal to support local health&rdquo; and presented on January 26th of 2017, introduces the Environmental Public Health Tracking website with a focus on how it can be used to gather and share information to support a variety of community-based projects. This is a great way to learn how to use EPHT for either your own personal interest, community work or other public health purposes.
-    </dd>
-    <dd>
-    	<dfn><a href="whats-new.html">December 8, 2016</a></dfn>
-        <strong>New Data Available!</strong> You can now look at 2015 for <a href="Health-Data/Childhood_Blood_Lead_Levels.html">Childhood Blood Lead</a> data, and 2014 for <a href="Environmental-Data/Air-Quality/index.html">Outdoor Air Quality</a> data
-    </dd>
-    <dd>
-    	<dfn><a href="whats-new.html">October 8, 2016</a></dfn>
-        <strong>New Content Posted!</strong> Check out our <a href="/planning_and_tools/hia/index.html">Health Impact Assessment</a> web page, under Planning &amp; Tools tab in the main menu and the <a href="/Environmental-Data/recreational-water/index.html">Recreational Beaches</a> web page, under the Environment tab in the main menu
-    </dd>
-    <dd>
-    	<dfn><a href="whats-new.html">October 1, 2016</a></dfn>
-        <strong>We've Upgraded! </strong>You might notice a new look and feel to our data queries and reports - we've recently upgraded the software that runs our system that enhances performance. 
-    </dd>
-    <dd>
-    	<dfn><a href="whats-new.html">May 26, 2016</a></dfn>
-        A new <a href="http://www.mass.gov/eohhs/docs/dph/environmental/lead/lead-drinking-water-faq-2016.pdf">Lead in Drinking Water FAQ</a> is now available!
-    </dd>
-    <dd>
-    	<dfn><a href="whats-new.html">March 31, 2016</a></dfn>
-        <a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27Community%27%5d%2freport%5b%40name%3d%27community-profile%27%5d&ui.name=community-profile&run.outputFormat=&run.prompt=true">Community Profile</a> reports are live! See selected health, environmental and demographic data for any community in Massachusetts, all in one report.
-    </dd>
-    <dd>
-    	<dfn><a href="whats-new.html">March 29, 2016</a></dfn>
-        Check out the first series of our updated EPHT <a href="https://matracking.ehs.state.ma.us/tutorial.html">tutorials</a>.
-    </dd>
-    <dd>
-    	<dfn><a href="whats-new.html">February 17, 2016</a></dfn>
-        New and Improved Pediatric Asthma report by School is now available. Click the "Maps &amp; Tables" button next to the <a href="https://matracking.ehs.state.ma.us/Health-Data/Asthma/index.html">Pediatric Asthma</a> landing page to explore the data!
-    </dd>
-    <dd>
-    	<a href="whats-new.html">View All Updates</a>
-    </dd>
-</dl>
-
+</p>
 <p>
-These web pages are supported through Cooperative Agreement with the U.S. Centers for Disease Control and Prevention (CDC). Web contents are solely the responsibility of the authors and do not necessarily represent the official views of the CDC. 
+	When considering the health impacts of climate change, it is important to identify individuals that may be more susceptible because of exposure to the climate hazard and related health risks, pre-existing health and environmental conditions in the community, and socioeconomic factors and/or the capacity of communities, institutions, or individuals to adjust and recover from climate impacts. For example, people living in floodplains, coastlines, and other at-risk locations are more vulnerable not only to extreme weather but also to social and economic stressors such as poverty. Many of these stressors can occur simultaneously or consecutively resulting in the “accumulation” of multiple, complex stressors that further reduce the ability to respond to and recover from climate-related events.
 </p>
 
 <p>
-We look forward to sharing this important  information with you and welcome your comments and suggestions as we move  forward.
+	Health surveillance and environmental quality data are available on the EPHT portal, and data on the social determinants of health, location of potential climate hazards (e.g. flood zones) and factors that increase resilience (e.g., open space) on the vulnerability mapping tool can together be used to characterize community vulnerability of human health to climate change.  Please see Mapping Data Sources for a complete list of layers available on the <a href="http://maps.massgis.state.ma.us/map_ol/cc_vuln.php" target="_blank">mapping tool</a>. 
 </p>
+
+<h3>Vulnerability Mapping Tool</h3>
+
+<p>
+	When considering the health impacts of climate change, it is important to identify individuals that may be more susceptible because of exposure to the climate hazard and related health risks, pre-existing health and environmental conditions in the community, socioeconomic factors and/or the capacity to adjust and recover from climate impacts. For example, people living in floodplains, coastlines, and other at-risk locations are more vulnerable not only to extreme weather but also to social and economic stressors such as poverty. Many of these stressors can occur simultaneously or consecutively resulting in the “accumulation” of multiple, complex stressors that further reduce the ability to respond to and recover from climate-related events.
+</p>
+
+<p>
+	 Health surveillance and environmental quality data are available on the EPHT portal, and data on the social determinants of health, location of potential climate hazards (e.g. flood zones) and factors that increase resilience (e.g., open space) on the <a href="http://maps.massgis.state.ma.us/map_ol/cc_vuln.php" target="_blank">Vulnerability Mapping Tool</a> can together be used to characterize community vulnerability to climate change. Please see <a href="/Climate-Change/mapping-data-sources.html">Mapping Data Sources</a> for more information.
+</p>
+
+<table id="layers_available">
+	<thead>
+		<tr>
+			<th colspan="2">
+				Layers Available in the Vulnerability Mapping Tool
+			</th>
+		</tr>
+		<tr>
+			<th>Community Layers</th>
+			<th>Census Tract Layers</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Percent of population under 5 years</td>
+			<td>Percent of population under 5 years</td>			
+		</tr>
+		<tr>
+			<td>Percent of population under 15 years </td>
+			<td>Percent of population under 15 years </td>			
+		</tr>
+		<tr>
+			<td>Percent of population over 65 years </td>
+			<td>Percent of population over 65 years </td>			
+		</tr>
+		<tr>
+			<td>Percent of population 65 and over living alone</td>
+			<td>Percent of population 65 and over living alone</td>			
+		</tr>
+		<tr>
+			<td>Percent of population living alone</td>
+			<td>Percent of population living alone</td>			
+		</tr>
+		<tr>
+			<td>Percent of population not white </td>
+			<td>Percent of population not white </td>			
+		</tr>
+		<tr>
+			<td>Percent with less than high school education </td>
+			<td>Percent with less than high school education </td>			
+		</tr>
+		<tr>
+			<td>Percent below poverty </td>
+			<td>Percent below poverty </td>			
+		</tr>
+		<tr>
+			<td>Percent of land in flood zone</td>
+			<td>Percent of land in flood zone</td>			
+		</tr>
+		<tr>
+			<td>Percent of agricultural land</td>
+			<td>Agricultural land (square meters) </td>			
+		</tr>
+		<tr>
+			<td>Acres of agricultural land in a flood zone</td>
+			<td>Agricultural land in 100 year flood zone (square meters)</td>			
+		</tr>
+		<tr>
+			<td>Percent of land identified as open space</td>
+			<td>Percent of land identified as open space</td>			
+		</tr>
+	</tbody>
+</table>
 
 
 </div>
