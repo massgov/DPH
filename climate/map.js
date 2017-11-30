@@ -8,7 +8,7 @@
 		"id":"_Towns_wCCV.shp1",
 		"name":"Towns_wCCV.shp",
 		"geometry":"polygon",
-		"url":"_Towns_wCCV.shp1.js",
+		"url":"/_Towns_wCCV.shp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",
