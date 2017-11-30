@@ -5,10 +5,10 @@
 	"layers":[
 	{
 		"type":"base-layer",
-		"id":"_Towns_wCCV_shp1",
+		"id":"Towns_wCCV_shp1",
 		"name":"Towns_wCCV_shp",
 		"geometry":"polygon",
-		"url":"_Towns_wCCV_shp1.js",
+		"url":"Towns_wCCV_shp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",
