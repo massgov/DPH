@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="massgov.css" type="text/css" />
 </head>
 <body>
+<script>
+var frame = document.getElementById('your-frame-id'); 
+frame.contentWindow.postMessage(/*any variable or object here*/, '*');
+</script>
   <div class="ma__iframe ">
   <div class="ma__iframe__container js-ma-responsive-iframe">
     <iframe height="1000" src="https://reportingsdkdev10.itd.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll/repository/sid/cm/rid/iBC1B99E06BC24EEAA032CDD92B0B420D/oid/i40353E12A5E742BE97F40F07D0971692/content/mht/content?encoding=UTF-8"></iframe>
