@@ -1,72 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
        "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
       <html>
-      <head>
-       <title>Display CSV in div</title>
-       <script type="text/javascript">
-
-         var xmlhttp;
-
-         function loadCSV(url)
-         {
-           xmlhttp=null;
-           // code for Mozilla, etc.
-           if (window.XMLHttpRequest)
-           {
-             xmlhttp=new XMLHttpRequest();
-           }
-           // code for IE
-           else if (window.ActiveXObject)
-           {
-             xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-           }
-
-           if (xmlhttp!=null)
-           {
-             xmlhttp.onreadystatechange=state_Change;
-             xmlhttp.open("GET",url,true);
-             xmlhttp.send(null);
-           }
-           else
-           {
-             alert("Your browser does not support XMLHTTP.");
-           }
-         }
-
-        function state_Change()
-        {
-          // if xmlhttp shows "loaded"
-          if (xmlhttp.readyState==4)
-          {
-            // if "OK"
-            if (xmlhttp.status==200)
-            {
-              var content = xmlhttp.responseText;
-              content = content.replace(/</g, '&lt;');
-              content = content.replace(/>/g, '&gt;');
-              content = content.replace(/\n/g, '<br>');
-              document.getElementById('frm').innerHTML = content;
-            }
-            else
-            {
-              alert("Problem retrieving CSV file");
-            }
-          }
-        }
-       </script>
-       <style type="text/css">
-         #frm
-         {
-           border:      1px solid black;
-           font-family: "Courier", "Courier New";
-           width:       700px;
-           height:      400px;
-         }
-       </style>
-      </head>
-
-      <body onload="loadCSV('https://massgov.github.io/DPH/Report_View_NAS_Dashboard.mht');">
-        <div id="frm"></div>
+     
+      <body>
+        <embed src="https://massgov.github.io/DPH/Report_View_NAS_Dashboard.mht" type="text/html" width="100%" height="100%">
       </body>
 
       </html>
