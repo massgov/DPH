@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+@media only screen and (min-width:780px){
+.circle-container {
+    position: relative;
+    width: 24em;
+    height: 24em;
+    padding: 2.8em;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    /*border: dashed 1px;*/
+    border-radius: 50%;
+    margin: 1.75em auto 0;
+}
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 5em; height: 5em;
+    margin: -2.5em;
+}
+
+.circle-container .center {
+	width: 16em; 
+	height: 16em;
+	margin: -5em -8em -8em -8em;
+		  
+}
+.circle-container img { display: block; width: 100%; }
+.deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
+.deg36 { transform: rotate(36deg) translate(12em) rotate(-36deg); }
+.deg72 { transform: rotate(72deg) translate(12em) rotate(-72deg); }
+.deg108 { transform: rotate(108deg) translate(12em) rotate(-108deg); }
+.deg144 { transform: rotate(144deg) translate(12em) rotate(-144deg); }
+.deg180 { transform: translate(-12em); }
+.deg216 { transform: rotate(216deg) translate(12em) rotate(-216deg); }
+.deg252 { transform: rotate(252deg) translate(12em) rotate(-252deg); }
+.deg288 { transform: rotate(288deg) translate(12em) rotate(-288deg); }
+.deg324 { transform: rotate(324deg) translate(12em) rotate(-324deg); }
+}
+@media only screen and (min-width:500px) and (max-width:779px) 
+ {
+.circle-container {
+    position: relative;
+    width: 12em;
+    height: 12em;
+    padding: 1.4em;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    /*border: dashed 1px;*/
+    border-radius: 50%;
+    margin: 1.75em auto 0;
+	
+}
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 2.5em; height: 2.5em;
+    margin: -1.25em;
+}
+
+.circle-container .center {
+	width: 8em; 
+	height: 8em;
+	margin: -2.5em -4em -4em -4em;
+		  
+}
+.circle-container img { display: block; width: 100%; }
+.deg0 { transform: translate(8em); } /* 12em = half the width of the wrapper */
+.deg36 { transform: rotate(36deg) translate(8em) rotate(-36deg); }
+.deg72 { transform: rotate(72deg) translate(8em) rotate(-72deg); }
+.deg108 { transform: rotate(108deg) translate(8em) rotate(-108deg); }
+.deg144 { transform: rotate(144deg) translate(8em) rotate(-144deg); }
+.deg180 { transform: translate(-8em); }
+.deg216 { transform: rotate(216deg) translate(8em) rotate(-216deg); }
+.deg252 { transform: rotate(252deg) translate(8em) rotate(-252deg); }
+.deg288 { transform: rotate(288deg) translate(8em) rotate(-288deg); }
+.deg324 { transform: rotate(324deg) translate(8em) rotate(-324deg); }
+}
+@media only screen  and (max-width:499px) 
+ {
+.circle-container {
+	display: inline-block;
+    position: relative;
+    width: 12em;
+    height: 12em;
+    padding: 1.4em;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    /*border: dashed 1px;*/
+   /* border-radius: 50%;*/
+    margin: 1.75em auto 0;
+}
+.circle-container a {
+    display: inline-block;
+    position: absolute;
+	/*
+    top: 50%; left: 50%;
+	*/
+    width: 2.5em; height: 2.5em;
+    margin: -1.25em;
+}
+
+.circle-container .center {
+	display: none;
+	/*
+	width: 8em; 
+	height: 8em;
+	margin: -2.5em -4em -4em -4em;
+	*/
+		  
+}
+
+.circle-container img { display: block; width: 100%; }
+.circle-container .deg0 { float:left; position:relative; margin-left: 30%; margin-top:15%; } /* 12em = half the width of the wrapper */
+.circle-container .deg36 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+.circle-container .deg72 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+.circle-container .deg108 { float:left; position:relative; margin-left: 30%;margin-top:15%;  }
+.circle-container .deg144 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+.circle-container .deg180 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+.circle-container .deg216 { float:left; position:relative; margin-left: 30%; margin-top:15%;  }
+.circle-container .deg252 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+.circle-container .deg288 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+.circle-container .deg324 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+}
