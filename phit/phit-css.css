@@ -19,13 +19,21 @@
     margin: -2.5em;
 }
 
+.circle-container table {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 5em; height: 5em;
+    margin: -2.5em;
+}
+
 .circle-container .center {
 	width: 16em; 
 	height: 16em;
 	margin: -5em -8em -8em -8em;
 		  
 }
-.circle-container img { display: block; width: 100%; }
+.circle-container img {display: block; width: 100%; }
 .deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
 .deg36 { transform: rotate(36deg) translate(12em) rotate(-36deg); }
 .deg72 { transform: rotate(72deg) translate(12em) rotate(-72deg); }
@@ -108,8 +116,7 @@
 	*/
 		  
 }
-
-.circle-container img { display: block; width: 100%; }
+.circle-container img [ display: block; width: 100%; }
 .circle-container .deg0 { float:left; position:relative; margin-left: 30%; margin-top:15%; } /* 12em = half the width of the wrapper */
 .circle-container .deg36 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
 .circle-container .deg72 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
@@ -120,4 +127,17 @@
 .circle-container .deg252 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
 .circle-container .deg288 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
 .circle-container .deg324 { float:left; position:relative; margin-left: 30%; margin-top:15%; }
+}
+
+.right-align
+{
+width: 200px; /*or your image's width*/
+height: 80px; /*or your image's height*/
+margin: 0;
+padding: 0;
+}
+.icon {
+	height: 80px;
+	width: 80px;
+	position: relative;
 }
