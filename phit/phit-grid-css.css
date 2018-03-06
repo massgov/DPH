@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/*
 @media only screen and (min-width:790px){
 	.phit-grid
 	 {
@@ -70,11 +71,14 @@
 	 width:500px;
  }
 }
-@media only screen and (min-width:500px) and (max-width:789px) 
+*/
+@media only screen and (min-width:500px) /*and (max-width:789px) */
  {
 	 .phit-grid
 	 {
 		 display:block;
+		 background-color:#ffffff;
+		 font-family:"Texta","Helvetica","Arial","sans-serif";
 	 }
 	 
 	 .phit-grid-mobile
