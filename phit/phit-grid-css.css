@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+@media only screen and (min-width:790px){
+	.phit-grid
+	 {
+		 display:block;
+	 }
+	 
+	 .phit-grid-mobile
+	 {
+		 display:none;
+	 }
+.phit-grid img 
+{
+	display: block; 
+ }
+ .phit-grid .center {
+	width: 8em; 
+	height: 8em;
+	margin: -2.5em -4em -4em -4em;
+ }
+	.cen-tab .tab-col
+	{
+		width:125px;
+		vertical-align:top;
+		text-align:center;
+		padding: 5px 10px 10px 5px;
+		
+	}
+	
+	.side-tab .tab-col
+	{
+		width:125px;
+		vertical-align:top;
+		text-align:center;
+		padding: 10px 5px 10px 5px;
+		
+	}	
+	
+		
+.cen-tab
+{
+	
+}
+
+.side-tab
+{
+}
+.phit-grid .side-tab img 
+{
+	display: block;
+ width: 125px;
+ height: 125px;
+ }	
+ 
+ .phit-grid .cen-tab img 
+{
+	display: block;
+ width: 125px;
+ height: 125px;
+ }	
+ 
+ .center-td
+ {
+	 padding:10px;
+ }
+ 
+ .center-td img
+ {
+	 width:500px;
+ }
+}
+@media only screen and (min-width:500px) and (max-width:789px) 
+ {
+	 .phit-grid
+	 {
+		 display:block;
+	 }
+	 
+	 .phit-grid-mobile
+	 {
+		 display:none;
+	 }
+.phit-grid img 
+{
+	display: block; 
+ }
+ .phit-grid .center {
+	width: 8em; 
+	height: 8em;
+	margin: -2.5em -4em -4em -4em;
+ }
+	.cen-tab .tab-col
+	{
+		width:75px;
+		vertical-align:top;
+		text-align:center;
+		padding: 5px 10px 10px 5px;
+		
+	}
+	
+	.side-tab .tab-col
+	{
+		width:75px;
+		vertical-align:top;
+		text-align:center;
+		padding: 10px 5px 10px 5px;
+		
+	}	
+	
+		
+.cen-tab
+{
+	
+}
+
+.side-tab
+{
+}
+.phit-grid .side-tab img 
+{
+	display: block;
+ width: 75px;
+ height: 75px;
+ }	
+ 
+ .phit-grid .cen-tab img 
+{
+	display: block;
+ width: 75px;
+ height: 75px;
+ }	
+ 
+ .center-td
+ {
+	 padding:10px;
+ }
+ 
+ .center-td img
+ {
+	 width:300px;
+ }
+}
+@media only screen  and (max-width:499px) 
+ {
+	 .phit-grid
+	 {
+		 display:none;
+	 }
+	 
+	 .phit-grid-mobile
+	 {
+		 display:block;
+		 font-size:9px;
+	 }
+.phit-grid-mobile img 
+{
+	display: block; 
+ }
+ .phit-grid-mobile .center {
+	width: 8em; 
+	height: 8em;
+	margin: -2.5em -4em -4em -4em;
+ }
+	.cen-tab .tab-col
+	{	
+		width:50px;
+		vertical-align:top;
+		text-align:center;
+		padding: 10px 10px 10px 10px;
+		
+	}
+	
+	.tab-col-span
+	{
+		width:100px;
+		vertical-align:top;
+		text-align:center;
+		padding: 10px 10px 10px 10px;
+		
+	}
+	
+	.tab-col-span img
+	{
+		
+		vertical-align:top;
+		text-align:center;
+		margin:auto;
+		
+	}
+		
+ .phit-grid-mobile .cen-tab img 
+{
+	display: block;
+ width: 50px;
+ height: 50px;
+ }	
+ 
+ 
+}
+
+
+
