@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/*
 @media only screen and (min-width:790px){
 	.phit-grid
 	 {
@@ -70,11 +71,14 @@
 	 width:500px;
  }
 }
-@media only screen and (min-width:500px) and (max-width:789px) 
+*/
+@media only screen and (min-width:500px) /*and (max-width:789px) */
  {
 	 .phit-grid
 	 {
 		 display:block;
+		 background-color:#ffffff;
+		 font-family:"Texta","Helvetica","Arial","sans-serif";
 	 }
 	 
 	 .phit-grid-mobile
@@ -92,7 +96,7 @@
  }
 	.cen-tab .tab-col
 	{
-		width:75px;
+		width:85px;
 		vertical-align:top;
 		text-align:center;
 		padding: 5px 10px 10px 5px;
@@ -101,7 +105,7 @@
 	
 	.side-tab .tab-col
 	{
-		width:75px;
+		width:85px;
 		vertical-align:top;
 		text-align:center;
 		padding: 10px 5px 10px 5px;
@@ -120,15 +124,17 @@
 .phit-grid .side-tab img 
 {
 	display: block;
- width: 75px;
- height: 75px;
+ width: 85px;
+ height: 85px;
+margin: auto;
  }	
  
  .phit-grid .cen-tab img 
 {
 	display: block;
- width: 75px;
- height: 75px;
+ width: 85px;
+ height: 85px;
+	margin: auto;
  }	
  
  .center-td
