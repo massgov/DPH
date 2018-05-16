@@ -613,20 +613,11 @@
     </script>
     <script src="https://mayflower.digital.mass.gov/assets/js/vendor-generated.js"></script>
     <script src="https://mayflower.digital.mass.gov/assets/js/index-generated.js"></script>
-    <script type="text/javascript">
-      window.initGoogleMaps = function() {
-        // Set a flag that the library has loaded, in case google maps js misses event.
-        window.googleMapsLoaded = true;
-        // Emit an event that the library has loaded.
-        $(document).trigger('ma:LibrariesLoaded:GoogleMaps');
-      }
-    </script>
+    
 
         <!-- Set google map libraries for event page -->
     
-    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&v=3.28&libraries=geometry,places,geocoder&callback=initGoogleMaps"></script>
-
-    <script>
+     <script>
       try {
         if($('.main-content').length === 0){
           var json = JSON.parse($("#sg-pattern-data-footer").html()),
