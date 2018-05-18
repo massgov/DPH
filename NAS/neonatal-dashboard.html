@@ -402,11 +402,13 @@
 <!-- end .header -->
 
 <main id="main-content" tabindex="-1">
-	<p>Click <a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognos.cgi?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27dph%27%5d%2freport%5b%40name%3d%27NAS_Dashboard_Iframe_for_web%27%5d&ui.name=NAS_Dashboard_Iframe_for_web&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false" target="_blank">here</a> to open the NAS dashboard in a new window if it is not loading correctly.</p>
+
+	
 <div align="center">
 
 	
-    	<p>Internet Explorer is not supported. Click <a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognos.cgi?b_action=cognosViewer&amp;ui.action=run&amp;ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27dph%27%5d%2freport%5b%40name%3d%27NAS_Dashboard_Iframe_for_web%27%5d&amp;ui.name=NAS_Dashboard_Iframe_for_web&amp;run.outputFormat=&amp;run.prompt=true&amp;cv.header=false&amp;cv.toolbar=false" target="_blank">here</a> to open the NAS dashboard in a new window if it is not loading correctly.</p>
+    	<p>Internet Explorer is not supported. Click <a href="https://cognos10.hhs.state.ma.us:443/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27dph%27%5d%2freport%5b%40name%3d%27NAS_Dashboard_Iframe_for_web_mass_gov%27%5d&ui.name=NAS_Dashboard_Iframe_for_web_mass_gov&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false
+" target="_blank">here</a> to open the NAS dashboard in a new window if it is not loading correctly.</p>
 <div id="test1">
 	</div>
 
@@ -414,9 +416,7 @@
     //doesn't block the load event
 	function createIframe(){
 		var i = document.createElement("iframe");
-		var a = Math.random() + "";
-		var t = a * 10000000000000;
-		i.src = "https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognos.cgi?b_action=cognosViewer&amp;ui.action=run&amp;ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27dph%27%5d%2freport%5b%40name%3d%27NAS_Dashboard_Iframe_for_web%27%5d&amp;ui.name=NAS_Dashboard_Iframe_for_web&amp;run.outputFormat=&amp;run.prompt=true&amp;cv.header=false&amp;cv.toolbar=false" + t;
+		i.src = "https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27dph%27%5d%2freport%5b%40name%3d%27NAS_Dashboard_Iframe_for_web%27%5d&ui.name=NAS_Dashboard_Iframe_for_web&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false";
 		i.scrolling = "auto";
 		i.frameborder = "0";
 		i.width = "1000px";
