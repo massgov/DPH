@@ -1043,8 +1043,134 @@ https://www.mass.gov/files/documents/2018/03/22/Icon_SubstanceAddiction_0.png
 
         title="">Tell us what you think</a> </div>
     
+    <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"lineage":[{"lineagePattern":"organisms-emergency-alerts","lineagePath":"..\/..\/patterns\/04-templates-single-column\/04-templates-single-column.html"},{"lineagePattern":"organisms-header","lineagePath":"..\/..\/patterns\/04-templates-single-column\/04-templates-single-column.html"},{"lineagePattern":"base-placeholder","lineagePath":"..\/..\/patterns\/04-templates-single-column\/04-templates-single-column.html"},{"lineagePattern":"organisms-footer","lineagePath":"..\/..\/patterns\/04-templates-single-column\/04-templates-single-column.html"}],"lineageR":[{"lineagePattern":"pages-event-listing","lineagePath":"..\/..\/patterns\/05-pages-event-listing\/05-pages-event-listing.html"},{"lineagePattern":"pages-section-landing","lineagePath":"..\/..\/patterns\/05-pages-section-landing\/05-pages-section-landing.html"},{"lineagePattern":"pages-topic-your-government","lineagePath":"..\/..\/patterns\/05-pages-topic-your-government\/05-pages-topic-your-government.html"},{"lineagePattern":"pages-topic","lineagePath":"..\/..\/patterns\/05-pages-topic\/05-pages-topic.html"}],"patternBreadcrumb":{"patternType":"templates"},"patternDesc":"<h3>Description<\/h3>\n\n<p>This is a Base Template with a single column of content.<\/p>\n\n<h3>Status<\/h3>\n\n<ul>\n<li>Stable as of 1.0.0<\/li>\n<\/ul>\n\n<h3>Pattern Contains<\/h3>\n\n<ul>\n<li>Header <\/li>\n<li>Footer<\/li>\n<li>Emergency Alerts<\/li>\n<li>This template contains <a href=\"https:\/\/twig.symfony.com\/doc\/2.x\/tags\/extends.html\">Twig Blocks<\/a> that can be used to populated the Header, Pre-Content, Page Content, Post Content, and Footer sections with patterns found in Mayflower<\/li>\n<\/ul>","patternExtension":"twig","patternName":"single column","patternPartial":"templates-single-column","patternState":"","extraOutput":[]}
+</script> <script>
+  /*!
+  * scriptLoader - v0.1
+  *
+  * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+  * Licensed under the MIT license
+  *
+  */
+  
+  var scriptLoader = {
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+  }
+</script> <script id="pl-js-polyfill-insert-1526395493">
+  (function() {
+    if (self != top) {
+      var cb = '1526395493';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script> <script id="pl-js-insert-1526395493">
+  (function() {
+    if (self != top) {
+      var cb = '1526395493';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script> <script>
+      var ma = ma || {};
+      // path to where the handlebar templates are being stored.
+      ma.themePath = "https://mayflower.digital.mass.gov/assets";
+      // path to where twig templates are being stored (for twigJS).
+      ma.twigPath = ma.themePath + "/patterns";
+      ma.iconPath = ma.themePath + "/images/svg-icons/"
+      ma.patternPaths = {
+        '@base': ma.twigPath + "/00-base/",
+        '@atoms': ma.twigPath + "/01-atoms/",
+        '@molecules': ma.twigPath + "/02-molecules/",
+        '@organisms': ma.twigPath + "/03-organisms/",
+        '@templates': ma.twigPath + "/04-templates/",
+        '@pages': ma.twigPath + "/05-pages/",
+        '@meta': ma.twigPath + "/07-meta/"
+      };
+    </script>
     <script src="https://mayflower.digital.mass.gov/assets/js/vendor-generated.js"></script>
     <script src="https://mayflower.digital.mass.gov/assets/js/index-generated.js"></script>
+    <!-- Set google map libraries for event page -->
+    <script>
+      try {
+        if($('.main-content').length === 0){
+          var json = JSON.parse($("#sg-pattern-data-footer").html()),
+
+          data = json.patternBreadcrumb.patternType;
+
+          if(data !== 'templates' && data !== 'pages') {
+            $('body').addClass('page-content');
+            $('html').addClass('main-content').addClass('main-content--full');
+          }
+        }
+      } catch(e) {}
+    </script>
+    <!-- JS to switch theme colors -->
+    <script>
+      (function(window, document, undefined) {
+        "use strict";
+
+        var forms = document.querySelectorAll('.js-header-search-form');
+        var themeCssEl = document.querySelector('.js-base-theme');
+        var cranberry = false;
+
+        for (var i = 0; i < forms.length; ++i) {
+          forms[i].addEventListener("submit", function(e){
+            e.preventDefault();
+            var color = this.querySelector('.ma__header-search__input').value;
+            if (color === 'cranberry') {
+              if (cranberry) { // revert back to base
+                themeCssEl.setAttribute('href',baseThemeCss);
+                switchClass('ma__colored-heading--cranberry', 'ma__colored-heading--green');
+                switchClass('ma__narrow-template--cranberry', 'ma__narrow-template--green');
+                switchClass('ma__action-card__item--cranberry', 'ma__action-card__item--green');
+                switchClass('ma__page-banner--cranberry', 'ma__page-banner--blue');
+              } else {  // convert to cranberry
+                themeCssEl.setAttribute('href',govThemeCss);
+                switchClass('ma__colored-heading--green', 'ma__colored-heading--cranberry');
+                switchClass('ma__narrow-template--green', 'ma__narrow-template--cranberry');
+                switchClass('ma__action-card__item--green', 'ma__action-card__item--cranberry');
+                switchClass('ma__page-banner--blue', 'ma__page-banner--cranberry');
+              }
+              cranberry = !cranberry;
+            }
+          });
+        }
+
+        function switchClass(source, update) {
+          var el = document.querySelectorAll('.' + source);
+
+          for (var i = 0; i < el.length; ++i) {
+            el[i].classList.remove(source);
+            el[i].classList.add(update);
+          }
+        }
+
+      })(window, document);
+
+    </script>
     
   </body>
 </html>
