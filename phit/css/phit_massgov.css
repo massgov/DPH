@@ -1,0 +1,6 @@
+.ma__action-card__item--blue{
+    background-color:#2E319
+}
+.ma__action-card__item--blue:hover{
+    background-color:rgba(20,85,143,0.8)
+}
