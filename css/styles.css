@@ -43,18 +43,25 @@ article,aside,dialog,figure,footer,header,hgroup,main, menu,nav,section	{ displa
 }
 
 .content {
-	clear:both;
-	display:block;
-	margin-top:0; 
+	clear: both;
+	display: block;
+	margin-top: 0;
+
+
+
+
 	padding-bottom:.5rem;
 	position: relative;
-	width:100%; /* outline:thick solid orange; */
+	width: 100%; /* outline:thick solid orange; */
 }
 
 @media screen and (min-width:759px) {
-
+ .aq-map{
+	width:750px;
+	height:450px; 
+ }
   .outer-container { 
-	  background-image: url("http://www.mass.gov/resources/images/backgrounds/eohhs.gif");
+	  background-image: url("https://www.mass.gov/resources/images/backgrounds/eohhs.gif");
 	  background-position: 51.9% 0;
 	  background-repeat: repeat-y;
 	  padding:0 14px 14px 14px;
@@ -89,7 +96,8 @@ article img {
 
 
 @media all and (min-width:500px) {
-	article img { float:right; margin: 0 .5rem .5rem .5rem; }
+	
+		article img { float:right; margin: 0 .5rem .5rem .5rem; }
 
 
 }
@@ -392,6 +400,7 @@ p {
 }
 
 .content p {
+	float: inherit;
 	/* max-width:33rem;  */
 	/* -webkit-columns: 300px 2;
    -moz-columns: 300px 2;
@@ -418,8 +427,9 @@ ul.vcard {
 
 
 dl {
-	font-size:.9rem;
-	margin:1rem auto;
+	font-size:.9rem
+	/* [disabled]margin:1rem auto; 
+	height:40px;*/
 	padding:0 0 .3rem 0;
 }
 dl dt {
@@ -448,10 +458,26 @@ dl dd {
 	border-bottom:1px solid #e4e4e4;
 	margin:.2rem .5rem .2rem .2rem;
 	padding:.5rem .25rem .5rem 2rem;
+	
 }
 dl dd:last-child {
+	
 	border:0;
+	
 }
+
+
+dl.data_c toggle {
+	
+	border:0;
+	 
+}
+
+dl.data_c dd:last-child{
+		
+border-left:1px solid #4f8a8d;	 
+} 
+ 
 dl dd p { width:90%; }
 
 dfn {
@@ -510,35 +536,40 @@ article dl.did_you_know dd img {
 dl.data_c ul,
 dl.avail_data ul,
 dl.pnm ul {
-	list-style:disc;
-	margin:0 0 0 0;
-	padding:0;
-	width:98%; 
+	list-style: disc;
+	margin: 0 0 0 15px;
+	padding: 0;
+	width: 98%;
 }
 dl.data_c ul li,
 dl.avail_data ul li,
 dl.pnm ul li {
-	display:list-item;
+	display: list-item;
+
+
 	margin:.5rem 0;
-	padding:0 0 0 0rem;
-	width:98%; 
+	padding: 0 0 0 0rem;
+	width: 98%;
 }
 
 dl.data_c {
-/*	background:#d3e4f4;*/
-	 border-left:1px solid #4f8a8d; 
+/*	background:#d3e4f4; */
+	 
 }
 dl.data_c dt {
 	background:#4F81BD;
 	margin-bottom: -.25rem;
 	padding-left:2rem;
-	width: 85%;
+	width: 85%;	
+
 }
 
-dl.avail_data {
+dl.avail_data dd:last-child{
 /*	background:#DEEADF;*/
 	 border-left:1px solid #006400; 
 }
+
+
 dl.avail_data dt {
 	background:#006400;
 	margin-bottom: -.25rem;
@@ -664,6 +695,27 @@ dl dd cite {
 	display:block;
 	float:none;
 }
+
+dl.did_you_know img.water_drop {
+	float:left; 
+	max-width:45px;
+	width:15%;
+}
+/*
+dl.did_you_know dd
+{	margin-left:0px;
+	padding-left: 0px;
+}
+
+dl.did_you_know dd
+{	margin-left:0px;
+	padding-left: 0px;
+}
+
+dl.did_you_knowa dd ul
+{	
+	padding-left:20px;
+}*/
 
 #topics dl {
 	border:1px solid #ffffff;
@@ -1103,9 +1155,55 @@ a.ma__button-minor-green {
     color: #fff;
 }
 
+/*Tutorial button css */
+.ma__button--small-tut {
+	border: 5px solid;
+	box-shadow: 0 0.25rem 0.5rem rgba(1,1,1,0.25);
+	display: inline-block;
+	letter-spacing: 0.1em;
+	padding: .4em 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	/*    font-size: 20px;*/
+/*    font-size: 1.25rem;*/
+	font-size: 20px;
+	line-height: 1.4;
+	float: right;
+	width:140px;
+	text-align:center;
+	font-weight:500;
+	text-decoration:none;	
+}
+
+a.ma__button-minor-green-tut {
+    background-color: #fff;
+    border-color: rgba(67,149,111,0.5);
+    color: #43956f;
+    font-weight: 800;
+	margin-bottom: .75rem;
+}
+.ma__button-minor-green-tut:hover,
+.ma__button-minor-green-tut:focus {
+    background-color: #43956f;
+    color: #fff;
+}
+.ma__button-minor-green-tut:visited {
+    background-color: #fff;
+    border-color: rgba(67,149,111,0.3);
+    color: #43956f;
+}
+.ma__button-minor-green-tut:active {
+    background-color: #444;
+    color: #fff;
+}
+
 a.comm_profile {
 	background:rgba(7,69,154,.1);
+	/*
 	background: url(../images/Massachusetts.png) center 1.6rem no-repeat;
+	*/
 	/* border:thin solid rgba(7,69,154,.08); */
 /*	border:thin solid rgba(153,202,60,1);*/
 	background-size: 70%;
@@ -1252,6 +1350,34 @@ table p {
 tr th {
 	font-weight:bold;
 	text-align:left;
+}
+
+.hideme {
+height: 1px; border: none } 
+.noborder{border: none}
+.offscreen {
+height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+
+table.newsletter
+{
+width:700px;
+margin-bottom:30px;
+}
+.newsletter tr th
+{
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:.15rem;
+	padding:.15rem;
+	width:33%;
+}
+
+table.newsletter td
+{
+	margin-bottom:.15rem;
+	padding:.15rem;
+	text-align: center;
+	width:33%;
 }
 
 table.data-button td
@@ -1418,15 +1544,17 @@ table#pathways tbody dfn {
 .rwd_table tbody tr td:nth-of-type(2),
 .rwd_table thead tr th:nth-of-type(3),
 .rwd_table tbody tr td:nth-of-type(3) {
-	width:98%;
+	width: 98%;
+	text-align: left;
 }
 
 #environmental_data tbody th {
 	text-transform: uppercase;
 }
 #environmental_data tbody tr td ul {
-	margin:0;
+	margin: 0;
 	padding: 0;
+	float: left;
 }
 
 
@@ -1540,6 +1668,10 @@ table#climate_impacts tbody dfn
 	}
 
 @media all and (max-width:700px) {
+	.aq-map{
+	width:450px;
+	height:250px; 
+ }
 	table#climate_impacts,
 	table#climate_resources {
 		display: block;
@@ -1727,6 +1859,64 @@ table#climate_impacts tbody dfn
 	#radon_risk tbody tr th {
 		width:15%; 
 	}
+	
+	#Indoor_AQ thead tr th,
+	#Indoor_AQ tbody tr td {
+		width:32%; 
+	}
+	#Indoor_AQ thead tr th:first-of-type {
+		width:32%; 
+	}
+	#Indoor_AQ tbody tr th {
+		width:32%; 
+	}
+	
+	#mapping_sources.rwd_table {
+		margin-top:5rem;
+}
+
+#Indoor_AQ.rwd_table {
+	border:0;
+	border-bottom:3px solid #0c0d0d;
+	display:block;
+	font-size:13px !important;
+	margin-bottom:0rem;
+	margin-top:0rem;
+	padding-bottom:0rem;
+	width:95%;
+}
+#Indoor_AQ.rwd_table td ul{
+	font-size:13px;
+		padding: 0px;
+		margin:0px;
+}
+#Indoor_AQ.rwd_table td ul li{
+	font-size:13px;
+	line-height:1.4;
+	padding-bottom:.5rem;
+}
+#Indoor_AQ.rwd_table th {
+		width:32%;
+}
+#Indoor_AQ.rwd_table caption {
+	background:#4F81BD;
+	color:#ffffff;
+	display:block;
+	font-weight:bold;
+	margin-top:2rem;
+	padding:.5rem;
+	text-align:left;
+	text-shadow: 2px 2px 1px #000;
+	width:97%;
+}
+#Indoor_AQ.rwd_table caption em {
+	color:#ffffff;
+}
+table#Indoor_AQ.rwd_table tbody
+{
+	display:inline-block;
+}
+	
 	#cancer_incidence thead tr th,
 	#cancer_incidence tbody tr th,
 	#cancer_incidence tbody tr td,
@@ -1778,7 +1968,8 @@ table#climate_impacts tbody dfn
 		width:25%;
 	}
 	#exposures tbody tr td {
-		width:55%;
+	width: 55%;
+	text-align: left;
 	}
 	table#climate_impacts thead tr th,
 	table#climate_impacts tbody tr td,
@@ -2503,7 +2694,7 @@ ul.sub-menu li a:focus {
     display: block;
 	font-weight: normal;
     height: auto;
-    height: 50px;
+/*    height: 50px;     */
     line-height: 1.0909090909;
 	text-transform: none;
   }
@@ -2896,6 +3087,36 @@ button:active	{
 
 /* =================================================== */
 
+/* ================== TOGGLES ======================== */
+
+.ia-toggle { position:relative; 
+margin: 0px 0px 0px 10px;}
+.ia-toggle dt,
+.ia-toggle caption { cursor:pointer; }
+.ia-toggle dd { display:none; }
+.ia-toggle dt:before,
+.ia-toggle caption:before	{
+	content: '+';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	font-size: 1.5rem;
+	padding: 0.25rem 0.25rem 0.25rem .5rem;
+}
+.ia-toggle caption {
+	display:block;
+	padding-left:1.5rem;
+}
+.ia-toggle caption:before {
+	left:0;
+	padding-top:.15rem;
+}
+.ia-toggle_active dd { display:block; }
+
+/* =================================================== */
+
+
 
 /* ================== DATA BUTTON ======================== */
 /* Media query for mobile*/
@@ -2907,6 +3128,11 @@ button:active	{
 {padding: 0px 0px 0px 0px;
 }
 @media only screen and (max-width: 480px)  {
+	
+	.aq-map{
+	width:300px;
+	height:150px; 
+ }
   .full {
     display:block;
     width:100%;
@@ -3156,4 +3382,275 @@ display:none;
 {
 display:none;	
 }
+}
+.outer-container .container #maincontent #newsletter thead tr th {
+	text-align: center;
+}
+
+/* copd css */
+.linkBoxBottom {
+	clear: both;
+}
+.linkBoxBottom h3 {
+	font-size: 1.4em !important;
+	line-height: 1.3em !important;
+	text-transform: uppercase;
+	color: #005baa !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	margin-top: 40px;
+}
+.linkBoxBottom ul {
+	list-style: none;
+	margin-left: 0;
+}
+.linkBoxBottom li {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 48px;
+	min-height: 30px;
+	margin-bottom: 15px !important;
+}
+.linkBoxBottom li span {
+	color: #005baa;
+	font-weight: bold;
+	font-style: italic;
+}
+.linkBoxBottom li.blue {
+	background: url(images/li-arrow-blue.png) no-repeat top left;
+}
+.linkBoxBottom li.orange {
+	background: url(images/li-arrow-orange.png) no-repeat top left;
+}
+.linkBoxBottom li.green {
+	background: url(images/li-arrow-green.png) no-repeat top left;
+}
+/* Tooltip container */
+.tooltip {
+	float:right;
+    position: relative;
+    display: inline-block;
+    padding:5px 5px 0px 0px;
+	width: 16px;
+    /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 325px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+	/*
+    bottom: 00%;
+    */
+	left: 25%;
+    margin-left: 0px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+
+font-size: 14px;
+font-weight: normal;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+dt.indoor-air
+{
+	color:#000000;
+	background-color:#ffffff;
+	margin:0px 25px 0px 15px;
+	width:75%;
+}
+
+.right-container {
+	display: flex;
+	justify-content: center;
+	float: left;
+	display: inline-block;
+	margin: 5px 0px 15px 10px;
+}
+
+
+.widget-grid {
+  
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.widget-item {
+  border: 1px solid #fff;
+  width: 300px;
+  float:left;
+}
+.widget-frame {
+	padding:0px;
+	margin:0px;  
+  }
+  
+  .data-boxes
+  {
+	  width:100%;
+	  float:left;
+  }
+  
+  /* tutorials style */
+  
+  
+  #tutorial-section.section
+  {		
+	  width:800px;
+	  display: block;
+	  flex-wrap: wrap;
+	  padding: 10px 0px 10px 0px;
+	  float:left;
+	  overflow: hidden;
+  }
+  #tutorial p
+  { padding: 0px 0px 0px 20px;
+  margin: 0px;
+  }
+  
+  #tutorial h4
+  {
+	  color:#000000;
+	  width:100%;
+	  margin:0px 0px 5px 0px;
+	  padding:0;
+	  float:left;
+	  clear:none;
+  }
+  
+  #tutorial.intro
+  {
+	  width:750px;
+	  border-width:2px;
+	  border-style:solid;
+	  border-color:rgb(31,73,125);
+	  padding:10px 0px 0px 15px;
+	  position:relative;
+	  float:left;
+	  
+  }
+  #tutorial.item-title
+  {
+	  max-width:750px;
+	  width:750px;
+	  display: inline-block;
+	  background-color:#FFC000;
+	  padding:10px;
+	  position:inherit;
+  }
+  
+    
+img.figure
+  {
+	max-width: 650px;
+	width: 650px;
+	height: 450px;
+	margin: 20px 60px 20px 60px;
+	display: block;
+	float:left;
+	position:inherit;
+	clear:none;
+	  
+  }
+
+#tutorial.content {
+	clear: both;
+	display: block;
+	margin: 0px auto 10px auto;
+	padding-bottom:.5rem;
+	position: relative;
+	width: 800px; /* outline:thick solid orange; */
+}
+
+#tutorial.pdf
+{
+display:inline-block;
+text-align:right;
+padding: 10px 10px 10px 0px;
+width:100%;	
+position:relative;
+}
+
+/* popup survey styling  */
+#MyPopup {
+  display:none;  
+}
+.overlay::before,
+.overlay .autopop {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+.overlay::before {
+  content: "";
+  background: rgba(0, 0, 0, .8);
+  display: block;
+  z-index: 99990
+}
+.overlay .autopop {
+  width: 1050px;
+  height: 585px;
+  margin: auto;
+  font: 18px/1.5em Open Sans;
+  background: #388557;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px 0 #000;
+  z-index: 99999;
+  /*
+  transition: all .5s ease-in-out;
+*/
+}
+.overlay:target::before {
+  display: none;
+}
+.overlay:target .autopop {
+  top: -200%;
+  right: -200%;
+  transform: rotate(90deg);
+}
+.autopop .a-content {
+  height: 100%;
+  overflow: auto;
+  padding: 15px;
+}
+.autopop .close {
+  top: 0;
+  right: 15px;
+  font: 800 30px Open Sans;
+  color: #fff !important;
+  transition: all 0.3s;
+  position: absolute;
 }

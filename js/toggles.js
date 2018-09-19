@@ -24,3 +24,30 @@ $(function() {
 	};
 	
 });
+
+// JavaScript Document
+
+// slide toggles
+$(function() {
+	// as soon as the page loads, hide all the dl.ia-toggle dd
+	$('.ia-toggle dd').hide();
+
+	
+	// on click of the dl.toggle dt, slideToggle the dd
+	$('.ia-toggle dt').click(function() {
+		$(this).next('dd').slideToggle(300);
+	});
+	
+	$('.ia-toggle caption').click(function() {
+		$(this).nextAll().eq(1).slideToggle(300);
+	 });
+	
+	// if a link has #anchor slideToggle open	
+	var url_hash = window.location.hash;
+	if (url_hash !== '') {
+	  $('.ia-toggle' + url_hash + ' dt').trigger('click');
+	  //$('p' + url_hash).parents('.toggle').next('dt').trigger('click');
+	  $('p:target').parents('.ia-toggle').next('dt').trigger('click');
+	};
+	
+});
