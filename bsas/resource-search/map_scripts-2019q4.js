@@ -35,7 +35,7 @@ function initMap() {
 	infowindow = new google.maps.InfoWindow();
 
 	// Get sites and apply to markers
-	downloadUrl('http://dph-co-1xdwh02/bsas/resource-search/siteList.xml', function (data) {
+	downloadUrl('/DPH/bsas/resource-search/siteList.xml', function (data) {
 		var xml = data.responseXML;
 		var markers = xml.documentElement.getElementsByTagName('marker');
 		Array.prototype.forEach.call(markers, function (markerElem) {
