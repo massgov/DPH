@@ -1,0 +1,20 @@
+{
+  "short_name": "IHR",
+  "name": "IHR",
+  "icons": [
+    {
+      "src":"apple-touch-icon-precomposed.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+	{
+      "src": "launcher-icon-3x.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fff",
+  "theme_color": "#5090cd",
+  "display": "standalone"
+}
