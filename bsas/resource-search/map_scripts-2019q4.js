@@ -1,7 +1,6 @@
 // Massachusetts Resource Search v1.2
 // Locate Massachusetts programs by zipcode and program type.
 // Institute for Health & Recovery, Inc., 2019
-
 var map;
 var markersArray = []; // Array to hold existing markers
 var lat = 42.3703; // Default coords are IHR Cambridge
