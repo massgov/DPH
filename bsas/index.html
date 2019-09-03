@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>
+	Resource Search &middot; IHR</title>
+    <meta name="description" content="
+    The Institute for Health and Recovery (IHR) is a statewide service, research, policy and program development agency. IHR designs its services based on an understanding of the impact of trauma." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--
+	<meta name="google-site-verification" content="QwKjzlJ3jSG-wEoqo054jT1rB-WL3Cz9Md7OF3281Tk" />
+	-->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,400italic,600italic,900italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://healthrecovery.org/font-awesome-4.3.0/css/font-awesome.min.css">
+		<!--[if IE]>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet" type="text/css">
+	<![endif]-->
+    <!-- Bootstrap -->
+    <link href="https://healthrecovery.org/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="https://healthrecovery.org/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="print" >
+    <link href="https://healthrecovery.org/css/mediahandler.css" rel="stylesheet" type="text/css">
+    <link href="https://healthrecovery.org/css/ihr-2017.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="https://healthrecovery.org/favicon.png" />
+	<link rel="apple-touch-icon" href="https://healthrecovery.org/apple-touch-icon-precomposed.png">
+	<!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- JavaScript plugins (requires jQuery) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        /* height: 500px; */
+		width: 100%;
+		margin-top: 15px;
+      }
+	  .gmap {
+	  	height: 500px;
+	  }
+	  .siteTitle {
+	  	font-size: 18px;
+	  
+	  }
+	@media screen and (max-width:767px){
+		.gmap-sm {
+			height: 480px;
+		}
+		.form-control {
+			font-size: 16px;
+		}
+	}
+	@media screen and (max-width:640px){
+		.gmap-xs {
+			height: 380px;
+		}
+		.form-control {
+			font-size: 16px;
+		}
+	}
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        padding: 0;
+      }
+</style>
+<script>
+// lat = "42.3703";
+// long = "-71.1033";
+</script>
+		<link rel="manifest" href="/manifest.json">
+</head>
+<body data-spy="scroll" data-target="#side-nav" data-offset="50">
+<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="supertitle hidden-sm hidden-xs">Pregnant Women &amp; Families</h4>
+				<h3 class="hidden-sm hidden-xs">Resource Search</h3>
+			</div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+			<div class="col-md-12">
+				<form role="form" method="POST" name="program-finder" id="program-finder">
+                	<div class="form-group">
+						<label for="zipcode" class="control-label">Enter a 5-digit Massachusetts zipcode</label>
+						<div id="zipInput" class="input-group col-md-4" style="margin-bottom:10px;">
+							<input type="text" pattern="[0-9]*" maxlength="5" class="form-control" id="zipcode" name="zipcode" />
+                            <div class="input-group-btn">
+								<button type="submit" class="btn btn-default" id="search">Search</button>
+							</div><!-- /.input-group-btn -->
+						</div><!-- /.input-group -->
+                    </div><!-- /.form-group -->
+						<label class="checkbox-inline">
+							<input id="kw1" type="checkbox" checked="checked"> Addiction Services
+						</label>
+						<label class="checkbox-inline">
+							<input id="kw2" type="checkbox" checked="checked"> Basic Needs
+						</label>
+                        <label class="checkbox-inline">
+							<input id="kw3" type="checkbox" checked="checked"> Behavioral Health
+						</label>
+                        <label class="checkbox-inline">
+							<input id="kw4" type="checkbox" checked="checked"> Housing
+						</label>
+                        <label class="checkbox-inline">
+							<input id="kw5" type="checkbox" checked="checked"> Medical Care
+						</label>
+                        <label class="checkbox-inline">
+							<input id="kw6" type="checkbox" checked="checked"> Parenting
+						</label>
+                        <label class="checkbox-inline">
+							<input id="kw7" type="checkbox" checked="checked"> Prenatal and postpartum Care
+						</label>
+                        <label class="checkbox-inline">
+							<input id="kw8" type="checkbox" checked="checked"> Professional Advancement
+						</label>
+                        <label class="checkbox-inline">
+							<input id="kw9" type="checkbox" checked="checked"> Urgent Assistance
+						</label>
+
+				</form><!-- form -->
+                <div id="search_results"></div> 
+			</div><!-- /.col-md-12 -->
+		</div><!-- /.row -->
+		<div class="row">
+			<div class="col-md-12">
+				<div id="map" class="gmap gmap-sm gmap-xs"></div>
+            </div><!-- /.col-md-12 -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+	<script defer src="http://dph-co-1xdwh02/bsas/resource-search/markerclusterer.js"></script>
+	<script defer src="http://dph-co-1xdwh02/bsas/resource-search/map_scripts-2019q4.js"></script>
+	
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0flKqae5z1FdcHBAgWD3oTWomrayokHk&callback=initMap">
+    </script>
+    
+<!-- For better map viewing, disable push and doc footer: -->
+	<div id="push"></div><!-- sticky footer -->
+	<!--
+	<script>
+	(function(w, d, s, u, g, a, b) {
+		w['GetFeedbackObject'] = g;
+		w[g] = w[g] || function() {
+			(w[g].q = w[g].q || []).push(arguments)
+		};
+		a = d.createElement(s), b = d.getElementsByTagName(s)[0];
+		a.async = 1;
+		a.src = u;
+		b.parentNode.insertBefore(a, b)
+	})(window, document, 'script', '//websites.cdn.getfeedback.com/embed/c0XA8TzpZb/gf.js', 'gf')
+</script>
+-->
+</body>
+</html>
