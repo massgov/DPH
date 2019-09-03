@@ -35,7 +35,7 @@ function initMap() {
 	infowindow = new google.maps.InfoWindow();
 
 	// Get sites and apply to markers
-	downloadUrl('https://healthrecovery.org/resource-search/siteList.xml', function (data) {
+	downloadUrl('https://massgov.github.io/DPH/bsas/resource-search/siteList.xml', function (data) {
 		var xml = data.responseXML;
 		var markers = xml.documentElement.getElementsByTagName('marker');
 		Array.prototype.forEach.call(markers, function (markerElem) {
@@ -139,7 +139,7 @@ function initMap() {
 
 
 			//Set default marker color to blue
-			var markerIcon = '/resource-search/images/spotlight-poi-blue.png';
+			var markerIcon = '/DPH/bsas/resource-search/images/spotlight-poi-blue.png';
 
 			var activeMap;
 
@@ -205,7 +205,7 @@ function initMap() {
 			zoomOnClick: false,
 			styles: [{
 				height: 53,
-				url: '/resource-search/images/c1.png',
+				url: '/DPH/bsas/resource-search/images/c1.png',
 				textColor: '#FFF',
 				width: 52
 			}]
