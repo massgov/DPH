@@ -90,7 +90,7 @@ view.ui.add(layerList, "top-right");
         // popupTemplate property of FeatureLayer
         var topcrashclusterLayer = new FeatureLayer({
           url:
-            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/",
+            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/0",
           popupTemplate: {
             title: "{NAME}",
             content: [
@@ -124,37 +124,102 @@ view.ui.add(layerList, "top-right");
         });
         map.add(topcrashclusterLayer);
 		
-		var aulLayer = new FeatureLayer({
+		var hsipclusterLayer = new FeatureLayer({
           url:
-            "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/AUL_Sites/FeatureServer",
+            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/1",
           popupTemplate: {
-            title: "{NAME }",
+            title: "{NAME}",
             content: [
               {
                 type: "fields",
                 fieldInfos: [
                   {
-                    fieldName: "NAME",
-                    label: "Name"
+                    fieldName: "CrashCount",
+                    label: "Crash Cont"
                   },
                   {
-                    fieldName: "ADDRESS",
-                    label: "Address"
+                    fieldName: "TOWNS",
+                    label: "Towns"
                   },
                   {
-                    fieldName: "TOWN",
-                    label: "City/Town"
+                    fieldName: "L1STREET",
+                    label: "Street 1"
                   },
                   {
-                    fieldName: "SITE_INFO",
-                    label: "Site Info"
-                  },
+                    fieldName: "L2STREET",
+                    label: "Street 2"
+                  }
                 ]
               }
             ]
           }
         });
-        map.add(aulLayer,0);
+        map.add(hsipclusterLayer);
+		
+		var bikeclusterLayer = new FeatureLayer({
+          url:
+            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/1",
+          popupTemplate: {
+            title: "{NAME}",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "CrashCount",
+                    label: "Crash Cont"
+                  },
+                  {
+                    fieldName: "TOWNS",
+                    label: "Towns"
+                  },
+                  {
+                    fieldName: "L1STREET",
+                    label: "Street 1"
+                  },
+                  {
+                    fieldName: "L2STREET",
+                    label: "Street 2"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        map.add(bikeclusterLayer);
+		
+		var pedclusterLayer = new FeatureLayer({
+          url:
+            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/1",
+          popupTemplate: {
+            title: "{NAME}",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "CrashCount",
+                    label: "Crash Cont"
+                  },
+                  {
+                    fieldName: "TOWNS",
+                    label: "Towns"
+                  },
+                  {
+                    fieldName: "L1STREET",
+                    label: "Street 1"
+                  },
+                  {
+                    fieldName: "L2STREET",
+                    label: "Street 2"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        map.add(pedclusterLayer);
+		
       });
     </script>
   </head>
