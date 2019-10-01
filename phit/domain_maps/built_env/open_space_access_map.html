@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
+    <!--
+  ArcGIS API for JavaScript, https://js.arcgis.com
+  For more information about the intro-popuptemplate sample, read the original sample description at developers.arcgis.com.
+  https://developers.arcgis.com/javascript/latest/sample-code/intro-popuptemplate/index.html
+  layer list with legend widget https://developers.arcgis.com/javascript/latest/sample-code/widgets-layerlist-legend/index.html
+  
+  -->
+<title>Open Space Accessibility in Massachusetts</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 475px;
+        width: 775px;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.12/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.12/"></script>
+
+    <script>
+      require([
+        "esri/Map",
+        "esri/layers/FeatureLayer",
+        "esri/views/MapView",
+		"esri/widgets/LayerList",
+        "esri/widgets/Legend"
+      ], function(Map, FeatureLayer, MapView, LayerList, Legend) {
+        // Create the map
+        var map = new Map({
+          basemap: "gray"
+        });
+
+        // Create the MapView
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          zoom: 8,
+          center: [-71.934843, 42.3642931],
+		  // popup docked
+		  popup: {
+            dockEnabled: true,
+            dockOptions: {
+              buttonEnabled: false,
+              breakpoint: false
+            }
+          }
+        });
+		
+		// Add a legend instance to the panel of a
+// ListItem in a LayerList instance
+const layerList = new LayerList({
+  view: view,
+  listItemCreatedFunction: function(event) {
+    const item = event.item;
+    if (item.layer.type != "group") {
+      // don't show legend twice
+      item.panel = {
+        content: "legend",
+        open: true
+      };
+    }
+  }
+});
+view.ui.add(layerList, "top-right");
+
+        
+       
+        /*************************************************************
+         * The PopupTemplate content is the text that appears inside the
+         * popup. {fieldName} can be used to reference the value of an
+         * attribute of the selected feature. HTML elements can be used
+         * to provide structure and styles within the content. The
+         * fieldInfos property is an array of objects (each object representing
+         * a field) that is use to format number fields and customize field
+         * aliases in the popup and legend.
+         **************************************************************/
+        // Reference the popupTemplate instance in the
+        // popupTemplate property of FeatureLayer
+        var landuseLayer = new FeatureLayer({
+          url:
+            "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer",
+          popupTemplate: {
+            title: "Land Cover Use 2016",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "SITE_NAME  ",
+                    label: "Site Name"
+                  },
+                  {
+                    fieldName: "FEE_OWNER  ",
+                    label: "Owner"
+                  },
+                  {
+                    fieldName: "PUB_ACCESS",
+                    label: "Accessibility"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        map.add(landuseLayer);		
+      });
+    </script>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
