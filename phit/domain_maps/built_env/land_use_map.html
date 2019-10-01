@@ -92,21 +92,21 @@ view.ui.add(layerList, "top-right");
           url:
             "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/LandCoverLandUse2016/FeatureServer",
           popupTemplate: {
-            title: "Land Cover Use 2016",
+            title: "{NAME}",
             content: [
               {
                 type: "fields",
                 fieldInfos: [
                   {
-                    fieldName: "Land Cover Name",
+                    fieldName: "COVERNAME",
                     label: "Land Cover Name"
                   },
                   {
-                    fieldName: "Generalized Use Name",
+                    fieldName: "USEGENNAME",
                     label: "Land Use"
                   },
                   {
-                    fieldName: "Town ID",
+                    fieldName: "TOWN_ID",
                     label: "City/Town"
                   }
                 ]
