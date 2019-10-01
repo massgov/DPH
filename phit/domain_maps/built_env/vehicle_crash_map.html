@@ -87,75 +87,7 @@ view.ui.add(layerList, "top-right");
          * aliases in the popup and legend.
          **************************************************************/
         // Reference the popupTemplate instance in the
-        // popupTemplate property of FeatureLayer
-        var topcrashclusterLayer = new FeatureLayer({
-          url:
-            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/0",
-          popupTemplate: {
-            title: "{NAME}",
-            content: [
-              {
-                type: "fields",
-                fieldInfos: [
-                  {
-                    fieldName: "CrashCount",
-                    label: "Crash Cont"
-                  },
-                  {
-                    fieldName: "TOWNS",
-                    label: "Towns"
-                  },
-                  {
-                    fieldName: "STREET1",
-                    label: "Street 1"
-                  },
-                  {
-                    fieldName: "STREET2",
-                    label: "Street 2"
-                  },
-                  {
-                    fieldName: "RANK",
-                    label: "Rank"
-                  }
-                ]
-              }
-            ]
-          }
-        });
-        map.add(topcrashclusterLayer);
-		
-		var hsipclusterLayer = new FeatureLayer({
-          url:
-            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/1",
-          popupTemplate: {
-            title: "{NAME}",
-            content: [
-              {
-                type: "fields",
-                fieldInfos: [
-                  {
-                    fieldName: "CrashCount",
-                    label: "Crash Cont"
-                  },
-                  {
-                    fieldName: "TOWNS",
-                    label: "Towns"
-                  },
-                  {
-                    fieldName: "L1STREET",
-                    label: "Street 1"
-                  },
-                  {
-                    fieldName: "L2STREET",
-                    label: "Street 2"
-                  }
-                ]
-              }
-            ]
-          }
-        });
-        map.add(hsipclusterLayer);
-		
+        // popupTemplate property of FeatureLayer		
 		var bikeclusterLayer = new FeatureLayer({
           url:
             "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/2",
@@ -219,6 +151,74 @@ view.ui.add(layerList, "top-right");
           }
         });
         map.add(pedclusterLayer);
+		
+		var hsipclusterLayer = new FeatureLayer({
+          url:
+            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/1",
+          popupTemplate: {
+            title: "{NAME}",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "CrashCount",
+                    label: "Crash Cont"
+                  },
+                  {
+                    fieldName: "TOWNS",
+                    label: "Towns"
+                  },
+                  {
+                    fieldName: "L1STREET",
+                    label: "Street 1"
+                  },
+                  {
+                    fieldName: "L2STREET",
+                    label: "Street 2"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        map.add(hsipclusterLayer);
+		
+		var topcrashclusterLayer = new FeatureLayer({
+          url:
+            "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/0",
+          popupTemplate: {
+            title: "{NAME}",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "CrashCount",
+                    label: "Crash Cont"
+                  },
+                  {
+                    fieldName: "TOWNS",
+                    label: "Towns"
+                  },
+                  {
+                    fieldName: "STREET1",
+                    label: "Street 1"
+                  },
+                  {
+                    fieldName: "STREET2",
+                    label: "Street 2"
+                  },
+                  {
+                    fieldName: "RANK",
+                    label: "Rank"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        map.add(topcrashclusterLayer);
 		
       });
     </script>
