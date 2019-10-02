@@ -32,13 +32,14 @@
       require([
         "esri/Map",
         "esri/layers/FeatureLayer",
+		"esri/layers/GroupLayer",
         "esri/views/MapView",
 		"esri/widgets/LayerList",
         "esri/widgets/Legend",
 		"esri/widgets/Search",
 		"esri/widgets/BasemapToggle",
 		"esri/widgets/ScaleBar"
-      ], function(Map, FeatureLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
+      ], function(Map, FeatureLayer, GroupLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
         // Create the map
         var map = new Map({
           basemap: "gray"
@@ -116,9 +117,9 @@ view.ui.add(layerList, "bottom-left");
         // Reference the popupTemplate instance in the
         // popupTemplate property of FeatureLayer
 				
-        var lilaoneandtenLayer = new FeatureLayer({
+        var lilaoneandtenLayer = new GroupLayer({
           url:
-            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/2",
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/0",
           popupTemplate: {
             title: "Low Income and Low Access at 1 and 10 miles",
             content: [
@@ -140,9 +141,9 @@ view.ui.add(layerList, "bottom-left");
         });
         
 		
-		var lilahalfand10Layer = new FeatureLayer({
+		var lilahalfand10Layer = new GroupLayer({
           url:
-            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/5",
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/3",
 			visible:false,
           popupTemplate: {
             title: "Low Income and Low Access at .5 and 10 miles",
@@ -164,9 +165,9 @@ view.ui.add(layerList, "bottom-left");
           }
         });
         		
-		var lilaoneandtwentyLayer = new FeatureLayer({
+		var lilaoneandtwentyLayer = new GroupLayer({
           url:
-            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/8",
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/6",
 			visible:false,
 		  popupTemplate: {
             title: "Low Income and Low Access at 1 and 20 miles",
@@ -188,9 +189,9 @@ view.ui.add(layerList, "bottom-left");
           }
         });
 		
-		var lilavehicleaccessLayer = new FeatureLayer({
+		var lilavehicleaccessLayer = new GroupLayer({
           url:
-            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/11",
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/9",
 			visible:false,
 		  popupTemplate: {
             title: "Low Income and Low Access using Vehicle Accesss",
