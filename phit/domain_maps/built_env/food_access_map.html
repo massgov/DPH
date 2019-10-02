@@ -119,7 +119,6 @@ view.ui.add(layerList, "bottom-left");
         var lilaoneandtenLayer = new FeatureLayer({
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/0",
-			definitionExpression: "St_Name = 'Massachusetts'",
           popupTemplate: {
             title: "Low Income and Low Access at 1 and 10 miles",
             content: [
@@ -145,7 +144,6 @@ view.ui.add(layerList, "bottom-left");
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/3",
 			visible:false,
-			definitionExpression: "St_Name = 'Massachusetts'",
           popupTemplate: {
             title: "Low Income and Low Access at .5 and 10 miles",
             content: [
@@ -170,7 +168,6 @@ view.ui.add(layerList, "bottom-left");
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/6",
 			visible:false,
-			definitionExpression: "St_Name = 'Massachusetts'",
 		  popupTemplate: {
             title: "Low Income and Low Access at 1 and 20 miles",
             content: [
@@ -195,7 +192,6 @@ view.ui.add(layerList, "bottom-left");
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/9",
 			visible:false,
-			definitionExpression: "St_Name = 'Massachusetts'",
 		  popupTemplate: {
             title: "Low Income and Low Access using Vehicle Accesss",
             content: [
