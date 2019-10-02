@@ -150,7 +150,7 @@ view.ui.add(layerList, "bottom-left");
             ]
           }
         });
-        map.add(twentyoneeLayer);
+        
 		
 		var aulLayer = new FeatureLayer({
           url:
@@ -182,8 +182,7 @@ view.ui.add(layerList, "bottom-left");
             ]
           }
         });
-        map.add(aulLayer);
-		
+        		
 		var superfundLayer = new FeatureLayer({
           url:
             "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Superfund_National_Priorities_List_(NPL)_Sites_with_Status_Information/FeatureServer/0",
@@ -218,6 +217,9 @@ view.ui.add(layerList, "bottom-left");
             ]
           }
         });
+		
+		map.add(aulLayer);
+		map.add(twentyoneeLayer);
         map.add(superfundLayer);
 		
       });
