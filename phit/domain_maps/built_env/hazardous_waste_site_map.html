@@ -88,58 +88,7 @@ view.ui.add(layerList, "top-right");
          **************************************************************/
         // Reference the popupTemplate instance in the
         // popupTemplate property of FeatureLayer
-		var superfundLayer = new FeatureLayer({
-          url:
-            "https://edg.epa.gov/arcgis/rest/services/edgGroup/MapServer/54",
-          popupTemplate: {
-            title: "{NAME}",
-            content: [
-              {
-                type: "fields",
-                fieldInfos: [
-                  {
-                    fieldName: "NAME",
-                    label: "Name"
-                  },
-                  {
-                    fieldName: "CITY",
-                    label: "City/Town"
-                  },
-                  {
-                    fieldName: "NPLPAD_URL",
-                    label: "Additional Information"
-                  }
-                ]
-              }
-            ]
-          }
-        });
-        map.add(superfundLayer);
-		
-		var superfundbouLayer = new FeatureLayer({
-          url:
-            "https://edg.epa.gov/arcgis/rest/services/edgGroup/MapServer/56",
-          popupTemplate: {
-            title: "{NAME}",
-            content: [
-              {
-                type: "fields",
-                fieldInfos: [
-                  {
-                    fieldName: "NAME",
-                    label: "Name"
-                  },
-                  {
-                    fieldName: "NPLPAD_URL",
-                    label: "Additional Information"
-                  }
-                ]
-              }
-            ]
-          }
-        });
-        map.add(superfundbouLayer);
-		
+				
         var twentyoneeLayer = new FeatureLayer({
           url:
             "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/C21e/FeatureServer",
