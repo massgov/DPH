@@ -90,24 +90,28 @@ view.ui.add(layerList, "top-right");
         // popupTemplate property of FeatureLayer
 		var superfundLayer = new FeatureLayer({
           url:
-            "https://edg.epa.gov/arcgis/rest/services/edgGroup/MapServer/54",
+            "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Superfund_National_Priorities_List_(NPL)_Sites_with_Status_Information/FeatureServer/0",
           popupTemplate: {
-            title: "{NAME}",
+            title: "Superfund Sites",
             content: [
               {
                 type: "fields",
                 fieldInfos: [
                   {
-                    fieldName: "NAME",
-                    label: "Name"
+                    fieldName: "Site_Name",
+                    label: "Site Name"
                   },
                   {
-                    fieldName: "CITY",
+                    fieldName: "City",
                     label: "City/Town"
                   },
+				  {
+                    fieldName: "Status",
+                    label: "Status"
+                  },
                   {
-                    fieldName: "NPLPAD_URL",
-                    label: "Additional Information"
+                    fieldName: "Site_Listing_Narrative",
+                    label: "Site Narrative"
                   }
                 ]
               }

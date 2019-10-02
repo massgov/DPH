@@ -35,8 +35,11 @@
         "esri/layers/FeatureLayer",
         "esri/views/MapView",
 		"esri/widgets/LayerList",
-        "esri/widgets/Legend"
-      ], function(Map, FeatureLayer, MapView, LayerList, Legend) {
+        "esri/widgets/Legend",
+		"esri/widgets/Search",
+		"esri/widgets/BasemapToggle",
+		"esri/widgets/ScaleBar"
+      ], function(Map, FeatureLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
         // Create the map
         var map = new Map({
           basemap: "gray"
@@ -57,6 +60,30 @@
             }
           }
         });
+		
+		var searchWidget = new Search({
+		  view: view
+		});
+		// Adds the search widget below other elements in
+		// the top left corner of the view
+		view.ui.add(searchWidget, {
+		  position: "top-left",
+		  index: 2
+		});		
+		
+		 var toggle = new BasemapToggle({
+		  view: view,  // The view that provides access to the map's "streets" basemap
+		  nextBasemap: "streets"  // Allows for toggling to the "hybrid" basemap
+		});
+		// Add widget to the top right corner of the view
+        view.ui.add(toggle, "bottom-right");
+      var scaleBar = new ScaleBar({
+		view: view
+		});
+		// Add widget to the bottom left corner of the view
+		view.ui.add(scaleBar, {
+			position: "top-left"
+		});
 		
 		// Add a legend instance to the panel of a
 // ListItem in a LayerList instance
@@ -88,7 +115,42 @@ view.ui.add(layerList, "top-right");
          **************************************************************/
         // Reference the popupTemplate instance in the
         // popupTemplate property of FeatureLayer
-				
+		var superfundLayer = new FeatureLayer({
+          url:
+            "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Superfund_National_Priorities_List_(NPL)_Sites_with_Status_Information/FeatureServer/0",
+          popupTemplate: {
+            title: "Superfund Sites",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "Site_Name",
+                    label: "Site Name"
+                  },
+                  {
+                    fieldName: "City",
+                    label: "City/Town"
+                  },
+				  {
+                    fieldName: "Status",
+                    label: "Status"
+                  },
+                  {
+                    fieldName: "Site_Listing_Narrative",
+                    label: "Site Narrative"
+                  },
+                  {
+                    fieldName: "Site_Progress_Profile",
+                    label: "Site Progress Profile"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        map.add(superfundLayer);
+		
         var twentyoneeLayer = new FeatureLayer({
           url:
             "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/C21e/FeatureServer",
