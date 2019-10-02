@@ -152,6 +152,7 @@ view.ui.add(layerList, "bottom-left");
 		var longtermLayer = new FeatureLayer({
           url:
             "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/LongTermCareFacs/FeatureServer",
+			visible:false,
           popupTemplate: {
             title: "{NAME }",
             content: [
