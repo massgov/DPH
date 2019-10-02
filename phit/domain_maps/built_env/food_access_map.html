@@ -1,0 +1,271 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
+    <!--
+  ArcGIS API for JavaScript, https://js.arcgis.com
+  For more information about the intro-popuptemplate sample, read the original sample description at developers.arcgis.com.
+  https://developers.arcgis.com/javascript/latest/sample-code/intro-popuptemplate/index.html
+  layer list with legend widget https://developers.arcgis.com/javascript/latest/sample-code/widgets-layerlist-legend/index.html
+  -->
+<title>Hazardous Waste Sites in Massachusetts</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 475px;
+        width: 775px;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.12/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.12/"></script>
+
+    <script>
+      require([
+        "esri/Map",
+        "esri/layers/FeatureLayer",
+        "esri/views/MapView",
+		"esri/widgets/LayerList",
+        "esri/widgets/Legend",
+		"esri/widgets/Search",
+		"esri/widgets/BasemapToggle",
+		"esri/widgets/ScaleBar"
+      ], function(Map, FeatureLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
+        // Create the map
+        var map = new Map({
+          basemap: "gray"
+        });
+
+        // Create the MapView
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          zoom: 8,
+          center: [-71.934843, 42.3642931],
+		  // popup docked
+		  popup: {
+            dockEnabled: true,
+            dockOptions: {
+              buttonEnabled: false,
+              breakpoint: false
+            }
+          }
+        });
+		
+		var searchWidget = new Search({
+		  view: view
+		});
+		// Adds the search widget below other elements in
+		// the top left corner of the view
+		view.ui.add(searchWidget, {
+		  position: "top-left",
+		  index: 2
+		});		
+		
+		 var toggle = new BasemapToggle({
+		  view: view,  // The view that provides access to the map's "streets" basemap
+		  nextBasemap: "streets"  // Allows for toggling to the "hybrid" basemap
+		});
+		// Add widget to the top right corner of the view
+        view.ui.add(toggle, "bottom-right");
+      var scaleBar = new ScaleBar({
+		view: view
+		});
+		// Add widget to the bottom left corner of the view
+		view.ui.add(scaleBar, {
+			position: "top-left",
+		  index: 1
+		});
+		
+		// Add a legend instance to the panel of a
+// ListItem in a LayerList instance
+const layerList = new LayerList({
+  view: view,
+  listItemCreatedFunction: function(event) {
+    const item = event.item;
+    if (item.layer.type != "group") {
+      // don't show legend twice
+      item.panel = {
+        content: "legend",
+        open: false
+      };
+    }
+  }
+});
+view.ui.add(layerList, "bottom-left");
+
+        
+       
+        /*************************************************************
+         * The PopupTemplate content is the text that appears inside the
+         * popup. {fieldName} can be used to reference the value of an
+         * attribute of the selected feature. HTML elements can be used
+         * to provide structure and styles within the content. The
+         * fieldInfos property is an array of objects (each object representing
+         * a field) that is use to format number fields and customize field
+         * aliases in the popup and legend.
+         **************************************************************/
+        // Reference the popupTemplate instance in the
+        // popupTemplate property of FeatureLayer
+				
+        var lilaoneandtenLayer = new FeatureLayer({
+          url:
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/0",
+			visible:false,
+          popupTemplate: {
+            title: "Low Income and Low Access at 1 and 10 miles",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "NAME",
+                    label: "Name"
+                  },
+                  {
+                    fieldName: "ADDRESS",
+                    label: "Address"
+                  },
+                  {
+                    fieldName: "TOWN",
+                    label: "City/Town"
+                  },
+                  {
+                    fieldName: "STATUS",
+                    label: "status"
+                  },
+                  {
+                    fieldName: "SITE_INFO",
+                    label: "Site Info"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        
+		
+		var lilahalfand10Layer = new FeatureLayer({
+          url:
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/3",
+			visible:false,
+          popupTemplate: {
+            title: "Low Income and Low Access at .5 and 10 miles",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "NAME",
+                    label: "Name"
+                  },
+                  {
+                    fieldName: "ADDRESS",
+                    label: "Address"
+                  },
+                  {
+                    fieldName: "TOWN",
+                    label: "City/Town"
+                  },
+                  {
+                    fieldName: "SITE_INFO",
+                    label: "Site Info"
+                  },
+                ]
+              }
+            ]
+          }
+        });
+        		
+		var lilaoneandtwentyLayer = new FeatureLayer({
+          url:
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/6",
+			definitionExpression: "State = 'Massachusetts'",
+		  popupTemplate: {
+            title: "Low Income and Low Access at 1 and 20 miles",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "Site_Name",
+                    label: "Site Name"
+                  },
+                  {
+                    fieldName: "City",
+                    label: "City/Town"
+                  },
+				  {
+                    fieldName: "Status",
+                    label: "Status"
+                  },
+                  {
+                    fieldName: "Site_Listing_Narrative",
+                    label: "Site Narrative"
+                  },
+                  {
+                    fieldName: "Site_Progress_Profile",
+                    label: "Site Progress Profile"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+		
+		var lilavehicleaccessLayer = new FeatureLayer({
+          url:
+            "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/9",
+			definitionExpression: "State = 'Massachusetts'",
+		  popupTemplate: {
+            title: "Low Income and Low Access using Vehicle Accesss",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "Site_Name",
+                    label: "Site Name"
+                  },
+                  {
+                    fieldName: "City",
+                    label: "City/Town"
+                  },
+				  {
+                    fieldName: "Status",
+                    label: "Status"
+                  },
+                  {
+                    fieldName: "Site_Listing_Narrative",
+                    label: "Site Narrative"
+                  },
+                  {
+                    fieldName: "Site_Progress_Profile",
+                    label: "Site Progress Profile"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+		
+		map.add(lilavehicleaccessLayer);
+		map.add(lilaoneandtwentyLayer);
+		map.add(lilahalfand10Layer);
+        map.add(lilaoneandtenLayer);
+		
+      });
+    </script>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
