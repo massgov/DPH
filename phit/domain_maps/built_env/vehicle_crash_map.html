@@ -119,8 +119,9 @@ view.ui.add(layerList, "bottom-left");
 		var bikeclusterLayer = new FeatureLayer({
           url:
             "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/2",
+			visible:false,
           popupTemplate: {
-            title: "{NAME}",
+            title: "Bike Involved Crash",
             content: [
               {
                 type: "fields",
@@ -151,8 +152,9 @@ view.ui.add(layerList, "bottom-left");
 		var pedclusterLayer = new FeatureLayer({
           url:
             "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/3",
+			visible:false,
           popupTemplate: {
-            title: "{NAME}",
+            title: "Pedestrian Involved Crash",
             content: [
               {
                 type: "fields",
@@ -183,8 +185,9 @@ view.ui.add(layerList, "bottom-left");
 		var hsipclusterLayer = new FeatureLayer({
           url:
             "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/1",
+			visible:false,
           popupTemplate: {
-            title: "{NAME}",
+            title: "Crash Cluster",
             content: [
               {
                 type: "fields",
@@ -216,7 +219,7 @@ view.ui.add(layerList, "bottom-left");
           url:
             "https://gis.massdot.state.ma.us/arcgis/rest/services/Roads/CrashClusters/MapServer/0",
           popupTemplate: {
-            title: "{NAME}",
+            title: "Top 200 Crash Location",
             content: [
               {
                 type: "fields",
