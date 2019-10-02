@@ -32,14 +32,13 @@
       require([
         "esri/Map",
         "esri/layers/FeatureLayer",
-		"esri/layers/GroupLayer",
         "esri/views/MapView",
 		"esri/widgets/LayerList",
         "esri/widgets/Legend",
 		"esri/widgets/Search",
 		"esri/widgets/BasemapToggle",
 		"esri/widgets/ScaleBar"
-      ], function(Map, FeatureLayer, GroupLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
+      ], function(Map, FeatureLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
         // Create the map
         var map = new Map({
           basemap: "gray"
@@ -117,7 +116,7 @@ view.ui.add(layerList, "bottom-left");
         // Reference the popupTemplate instance in the
         // popupTemplate property of FeatureLayer
 				
-        var lilaoneandtenLayer = new GroupLayer({
+        var lilaoneandtenLayer = new FeatureLayer({
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/2",
           popupTemplate: {
@@ -141,7 +140,7 @@ view.ui.add(layerList, "bottom-left");
         });
         
 		
-		var lilahalfand10Layer = new GroupLayer({
+		var lilahalfand10Layer = new FeatureLayer({
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/5",
 			visible:false,
@@ -165,7 +164,7 @@ view.ui.add(layerList, "bottom-left");
           }
         });
         		
-		var lilaoneandtwentyLayer = new GroupLayer({
+		var lilaoneandtwentyLayer = new FeatureLayer({
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/8",
 			visible:false,
@@ -189,7 +188,7 @@ view.ui.add(layerList, "bottom-left");
           }
         });
 		
-		var lilavehicleaccessLayer = new GroupLayer({
+		var lilavehicleaccessLayer = new FeatureLayer({
           url:
             "https://gis.ers.usda.gov/arcgis/rest/services/foodaccess2015/MapServer/11",
 			visible:false,
