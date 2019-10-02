@@ -115,42 +115,7 @@ view.ui.add(layerList, "bottom-left");
          **************************************************************/
         // Reference the popupTemplate instance in the
         // popupTemplate property of FeatureLayer
-		var superfundLayer = new FeatureLayer({
-          url:
-            "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Superfund_National_Priorities_List_(NPL)_Sites_with_Status_Information/FeatureServer/0",
-          popupTemplate: {
-            title: "Superfund Sites",
-            content: [
-              {
-                type: "fields",
-                fieldInfos: [
-                  {
-                    fieldName: "Site_Name",
-                    label: "Site Name"
-                  },
-                  {
-                    fieldName: "City",
-                    label: "City/Town"
-                  },
-				  {
-                    fieldName: "Status",
-                    label: "Status"
-                  },
-                  {
-                    fieldName: "Site_Listing_Narrative",
-                    label: "Site Narrative"
-                  },
-                  {
-                    fieldName: "Site_Progress_Profile",
-                    label: "Site Progress Profile"
-                  }
-                ]
-              }
-            ]
-          }
-        });
-        map.add(superfundLayer);
-		
+				
         var twentyoneeLayer = new FeatureLayer({
           url:
             "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/C21e/FeatureServer",
@@ -217,7 +182,44 @@ view.ui.add(layerList, "bottom-left");
             ]
           }
         });
-        map.add(aulLayer,0);
+        map.add(aulLayer);
+		
+		var superfundLayer = new FeatureLayer({
+          url:
+            "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Superfund_National_Priorities_List_(NPL)_Sites_with_Status_Information/FeatureServer/0",
+          popupTemplate: {
+            title: "Superfund Sites",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "Site_Name",
+                    label: "Site Name"
+                  },
+                  {
+                    fieldName: "City",
+                    label: "City/Town"
+                  },
+				  {
+                    fieldName: "Status",
+                    label: "Status"
+                  },
+                  {
+                    fieldName: "Site_Listing_Narrative",
+                    label: "Site Narrative"
+                  },
+                  {
+                    fieldName: "Site_Progress_Profile",
+                    label: "Site Progress Profile"
+                  }
+                ]
+              }
+            ]
+          }
+        });
+        map.add(superfundLayer);
+		
       });
     </script>
   </head>
