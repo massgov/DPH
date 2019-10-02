@@ -82,7 +82,8 @@
 		});
 		// Add widget to the bottom left corner of the view
 		view.ui.add(scaleBar, {
-			position: "top-left"
+			position: "top-left",
+		  index: 1
 		});
 		
 		// Add a legend instance to the panel of a
@@ -119,6 +120,7 @@ view.ui.add(layerList, "bottom-left");
         var twentyoneeLayer = new FeatureLayer({
           url:
             "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/C21e/FeatureServer",
+			visible:false,
           popupTemplate: {
             title: "21E sites",
             content: [
@@ -155,6 +157,7 @@ view.ui.add(layerList, "bottom-left");
 		var aulLayer = new FeatureLayer({
           url:
             "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/AUL_Sites/FeatureServer",
+			visible:false,
           popupTemplate: {
             title: "AUL Sites",
             content: [
@@ -186,7 +189,7 @@ view.ui.add(layerList, "bottom-left");
 		var superfundLayer = new FeatureLayer({
           url:
             "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Superfund_National_Priorities_List_(NPL)_Sites_with_Status_Information/FeatureServer/0",
-			definitionExpression: "State = 'Massachusetts'"	
+			definitionExpression: "State = 'Massachusetts'",
 		  popupTemplate: {
             title: "Superfund Sites",
             content: [
