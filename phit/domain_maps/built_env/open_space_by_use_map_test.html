@@ -52,7 +52,8 @@
     //Service URL  
     var layerUrl = "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0";
       
-    //Define PopupTemplate for the layer     
+    //Define PopupTemplate for the layer 
+/*    
     var collegePopup = new PopupTemplate({
       title: "{COUNTY}, {STATE}",
       description: "<b>{ATT_COL}</b> adults (ages 25+) in {COUNTY} have attended at least some college in their lifetime. <b>{NO_COL}</b> adults in the same age group have never attended any college courses.",
@@ -81,7 +82,7 @@
         }
       }]
     });  
-      
+     */ 
     //Set the symbols for each category
     var defaultSym = new SimpleFillSymbol().setOutline(new SimpleLineSymbol().setWidth(0.3).setColor(new Color([128,128,128,0.5])));      
     var conserSym = new SimpleFillSymbol().setColor(new Color("#ee5151")).setOutline(new SimpleLineSymbol().setWidth(0.3).setColor(new Color([128,128,128,0.5])));
@@ -158,7 +159,8 @@
 
     layer = new FeatureLayer(layerUrl, {
       outFields: ["*"],
-      infoTemplate: collegePopup,
+	  /*
+      infoTemplate: collegePopup,*/
       opacity:1
     });
 
@@ -168,7 +170,7 @@
         map: map,
         layerInfos: [{
           layer: layer,
-          title: "U.S. Counties by adult population (25+) and whether the majority of adults attended college"
+          title: "Open space by Use"
         }]
       }, "legend");
       legend.startup();
