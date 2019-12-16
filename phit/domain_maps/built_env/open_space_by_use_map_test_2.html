@@ -50,7 +50,7 @@
     });
 
     //Service URL  
-    var layerUrl = "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/us_county_educational_attainment_pop/FeatureServer/0";
+    var layerUrl = "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0";
       
     //Define PopupTemplate for the layer     
     var collegePopup = new PopupTemplate({
@@ -98,13 +98,13 @@
     ******************************************************************/
     var renderer = new UniqueValueRenderer(defaultSym, "ATT_COL_DOM");
     renderer.addValue({
-      value: "Population 25+ that attended college",
-      label: "Majority of adults attended at least some college",
+      value: "Conservation",
+      label: "Conservation",
       symbol: attColSym
     });
     renderer.addValue({
-      value: "Population 25+ that never attended college",
-      label: "Majority of adults never attended college",
+      value: "Recreation",
+      label: "Recreation",
       symbol: noColSym
     });  
 
