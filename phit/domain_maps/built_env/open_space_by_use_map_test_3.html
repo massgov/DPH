@@ -110,50 +110,36 @@ view.ui.add(layerList, "bottom-left");
         type: "unique-value",
         field: "PRIM_PURP",
         uniqueValueInfos: [
-          createFillSymbol("Conservation", "#ee5151"),
-          createFillSymbol("Recreation", "#129fce"),
-          createFillSymbol("Recreation and Conservation", "#a7c637"),
-          createFillSymbol("Water Supply", "#9f559d"),
-          createFillSymbol("Agriculture", "#fd911f"),
-          createFillSymbol("Historical/Cultural", "#ffdf40"),
-          createFillSymbol("Flood Control", "#f788d8"),
-          createFillSymbol("Other", "#b8814b"),
-          createFillSymbol("Unknown", "#3db09a"),
-          createFillSymbol("Underwater", "#6a6ad6")
+          createFillSymbol("R", "#ee5151"),
+          createFillSymbol("C", "#129fce"),
+          createFillSymbol("B", "#a7c637"),
+          createFillSymbol("H", "#9f559d"),
+          createFillSymbol("A", "#fd911f"),
+          createFillSymbol("W", "#ffdf40"),
+          createFillSymbol("S", "#f788d8"),
+          createFillSymbol("F", "#b8814b"),
+          createFillSymbol("U", "#3db09a"),
+          createFillSymbol("O", "#6a6ad6"),
+          createFillSymbol("X", "#f0f0f0")
         ]
       };
       
       var openspaces = new FeatureLayer({
         url:          "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
-        renderer: openSpacesRenderer,
-        opacity: 0.90,
         //*** ADD ***//
-        outFields: ["SITE_NAME","FEE_OWNER","PRIM_PURP"],
-          popupTemplate: {
-            title: "Land Cover Use 2016",
-            content: [
-              {
-                type: "fields",
-                fieldInfos: [
-                  {
-                    fieldName: "SITE_NAME  ",
-                    label: "Site Name"
-                  },
-                  {
-                    fieldName: "FEE_OWNER  ",
-                    label: "Owner"
-                  },
-                  {
-                    fieldName: "PRIM_PURP",
-                    label: "Primary Purpose"
-                  }
-                ]
-              }
-            ]
-          }
+        outFields: ["SITE_NAME","FEE_NAME","PRIM_PURP"],
+		
+        //*** ADD ***//
+        popupTemplate: {  // Enable a popup
+          Site: "{SITE_NAME}", // Show attribute value
+          Owner: "{FEE_NAME}",
+          Use: "{PRIM_PURP}"
+        },
+		
+        renderer: openSpacesRenderer
       });
 
-      map.add(openspaces);
+      map.add(openspaces,0);
              
     });
   </script>
