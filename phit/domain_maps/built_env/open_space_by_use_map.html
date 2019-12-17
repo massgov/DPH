@@ -8,9 +8,8 @@
   For more information about the intro-popuptemplate sample, read the original sample description at developers.arcgis.com.
   https://developers.arcgis.com/javascript/latest/sample-code/intro-popuptemplate/index.html
   layer list with legend widget https://developers.arcgis.com/javascript/latest/sample-code/widgets-layerlist-legend/index.html
-  
   -->
-<title>Open Space, by Primary Use, in Massachusetts</title>
+ <title>Open Space by Primary Use</title>
 
     <style>
       html,
@@ -22,15 +21,12 @@
         width: 775px;
       }
     </style>
-
-    <link
-      rel="stylesheet"
-      href="https://js.arcgis.com/4.12/esri/themes/light/main.css"
-    />
-    <script src="https://js.arcgis.com/4.12/"></script>
-
-    <script>
-      require([
+  
+  <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.13/"></script>
+  
+  <script>  
+    require([
         "esri/Map",
         "esri/layers/FeatureLayer",
         "esri/views/MapView",
@@ -40,12 +36,12 @@
 		"esri/widgets/BasemapToggle",
 		"esri/widgets/ScaleBar"
       ], function(Map, FeatureLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
-        // Create the map
-        var map = new Map({
-          basemap: "gray"
-        });
 
-        // Create the MapView
+      var map = new Map({
+        basemap: "gray"
+      });
+
+     // Create the MapView
         var view = new MapView({
           container: "viewDiv",
           map: map,
@@ -103,51 +99,65 @@ const layerList = new LayerList({
 });
 view.ui.add(layerList, "bottom-left");
 
-
         
-       
-        /*************************************************************
-         * The PopupTemplate content is the text that appears inside the
-         * popup. {fieldName} can be used to reference the value of an
-         * attribute of the selected feature. HTML elements can be used
-         * to provide structure and styles within the content. The
-         * fieldInfos property is an array of objects (each object representing
-         * a field) that is use to format number fields and customize field
-         * aliases in the popup and legend.
-         **************************************************************/
-        // Reference the popupTemplate instance in the
-        // popupTemplate property of FeatureLayer
-        var landuseLayer = new FeatureLayer({
-          url:
-            "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer",
-          popupTemplate: {
-            title: "Land Cover Use 2016",
-            content: [
-              {
-                type: "fields",
-                fieldInfos: [
-                  {
-                    fieldName: "SITE_NAME  ",
-                    label: "Site Name"
-                  },
-                  {
-                    fieldName: "FEE_OWNER  ",
-                    label: "Owner"
-                  },
-                  {
-                    fieldName: "PRIMARY_PURPOSE",
-                    label: "Primary Purpose"
-                  }
-                ]
-              }
-            ]
-          }
-        });
-        map.add(landuseLayer);		
+      // add type of open space of FeatureLayer
+      function createFillSymbol(value, color) {
+        return {
+          value: value,
+          symbol: {
+            color: color,
+            type: "simple-fill",
+            style: "solid",
+            outline: {
+              style: "none"
+            }
+          },
+          label: value
+        };
+      }
+
+      var openSpacesRenderer = {
+        type: "unique-value",
+        field: "PRIM_PURP",
+        uniqueValueInfos: [
+          createFillSymbol("R", "#ee5151"),
+          createFillSymbol("C", "#129fce"),
+          createFillSymbol("B", "#a7c637"),
+          createFillSymbol("H", "#9f559d"),
+          createFillSymbol("A", "#fd911f"),
+          createFillSymbol("W", "#ffdf40"),
+          createFillSymbol("S", "#f788d8"),
+          createFillSymbol("F", "#b8814b"),
+          createFillSymbol("U", "#3db09a"),
+          createFillSymbol("O", "#6a6ad6"),
+          createFillSymbol("X", "#f0f0f0")
+        ],
+        legendOptions: {
+    title: "Primary Use"
+  },
+      };
+      
+      var popupPrimaryuse = {
+        "title": "{SITE_NAME}",
+        "content": "<b>Community:</b> {TOWN_ID}<br><b>Managed By:</b> {FEE_OWNER}<br><b>Primary Use:</b> {PRIM_PURP}"
+      }
+      
+      var openspaces = new FeatureLayer({
+        url:          "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
+        //*** ADD ***//
+        outFields: ["SITE_NAME","FEE_NAME","PRIM_PURP"],
+
+        //*** ADD ***//
+        popupTemplate: popupPrimaryuse,
+        renderer: openSpacesRenderer
       });
-    </script>
-  </head>
-  <body>
-    <div id="viewDiv"></div>
-  </body>
+
+      map.add(openspaces,0);
+             
+    });
+  </script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
 </html>

@@ -1,16 +1,26 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
-  <style>
-    html, body, #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
+  <head>
+    <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
+    <!--
+  ArcGIS API for JavaScript, https://js.arcgis.com
+  For more information about the intro-popuptemplate sample, read the original sample description at developers.arcgis.com.
+  https://developers.arcgis.com/javascript/latest/sample-code/intro-popuptemplate/index.html
+  layer list with legend widget https://developers.arcgis.com/javascript/latest/sample-code/widgets-layerlist-legend/index.html
+  -->
+ <title>Food Accessibility in Massachusetts</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 475px;
+        width: 775px;
+      }
+    </style>
   
   <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
   <script src="https://js.arcgis.com/4.13/"></script>
@@ -121,21 +131,24 @@ view.ui.add(layerList, "bottom-left");
           createFillSymbol("U", "#3db09a"),
           createFillSymbol("O", "#6a6ad6"),
           createFillSymbol("X", "#f0f0f0")
-        ]
+        ],
+        legendOptions: {
+    title: "Primary Use"
+  },
       };
+      
+      var popupPrimaryuse = {
+        "title": "{SITE_NAME}",
+        "content": "<b>Community:</b> {TOWN_ID}<br><b>Managed By:</b> {FEE_OWNER}<br><b>Primary Use:</b> {PRIM_PURP}"
+      }
       
       var openspaces = new FeatureLayer({
         url:          "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
         //*** ADD ***//
         outFields: ["SITE_NAME","FEE_NAME","PRIM_PURP"],
-		
+
         //*** ADD ***//
-        popupTemplate: {  // Enable a popup
-          Site: "{SITE_NAME}", // Show attribute value
-          Owner: "{FEE_NAME}",
-          Use: "{PRIM_PURP}"
-        },
-		
+        popupTemplate: popupPrimaryuse,
         renderer: openSpacesRenderer
       });
 
