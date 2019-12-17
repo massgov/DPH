@@ -1,0 +1,164 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.13/"></script>
+  
+  <script>  
+    require([
+        "esri/Map",
+        "esri/layers/FeatureLayer",
+        "esri/views/MapView",
+		"esri/widgets/LayerList",
+        "esri/widgets/Legend",
+		"esri/widgets/Search",
+		"esri/widgets/BasemapToggle",
+		"esri/widgets/ScaleBar"
+      ], function(Map, FeatureLayer, MapView, LayerList, Legend, Search, BasemapToggle,ScaleBar) {
+
+      var map = new Map({
+        basemap: "gray"
+      });
+
+     // Create the MapView
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          zoom: 8,
+          center: [-71.934843, 42.3642931],
+		  // popup docked
+		  popup: {
+            dockEnabled: true,
+            dockOptions: {
+              buttonEnabled: false,
+              breakpoint: false
+            }
+          }
+        });
+		
+		var searchWidget = new Search({
+		  view: view
+		});
+		// Adds the search widget below other elements in
+		// the top left corner of the view
+		view.ui.add(searchWidget, {
+		  position: "top-left",
+		  index: 2
+		});		
+		
+		 var toggle = new BasemapToggle({
+		  view: view,  // The view that provides access to the map's "streets" basemap
+		  nextBasemap: "streets"  // Allows for toggling to the "hybrid" basemap
+		});
+		// Add widget to the top right corner of the view
+        view.ui.add(toggle, "bottom-right");
+      var scaleBar = new ScaleBar({
+		view: view
+		});
+		// Add widget to the bottom left corner of the view
+		view.ui.add(scaleBar, {
+			position: "top-left",
+		  index: 1
+		});
+		
+		// Add a legend instance to the panel of a
+// ListItem in a LayerList instance
+const layerList = new LayerList({
+  view: view,
+  listItemCreatedFunction: function(event) {
+    const item = event.item;
+    if (item.layer.type != "group") {
+      // don't show legend twice
+      item.panel = {
+        content: "legend",
+        open: false
+      };
+    }
+  }
+});
+view.ui.add(layerList, "bottom-left");
+
+        
+      // add type of open space of FeatureLayer
+      function createFillSymbol(value, color) {
+        return {
+          value: value,
+          symbol: {
+            color: color,
+            type: "simple-fill",
+            style: "solid",
+            outline: {
+              style: "none"
+            }
+          },
+          label: value
+        };
+      }
+
+      var openSpacesRenderer = {
+        type: "unique-value",
+        field: "PRIM_PURP",
+        uniqueValueInfos: [
+          createFillSymbol("Conservation", "#ee5151"),
+          createFillSymbol("Recreation", "#129fce"),
+          createFillSymbol("Recreation and Conservation", "#a7c637"),
+          createFillSymbol("Water Supply", "#9f559d"),
+          createFillSymbol("Agriculture", "#fd911f"),
+          createFillSymbol("Historical/Cultural", "#ffdf40"),
+          createFillSymbol("Flood Control", "#f788d8"),
+          createFillSymbol("Other", "#b8814b"),
+          createFillSymbol("Unknown", "#3db09a"),
+          createFillSymbol("Underwater", "#6a6ad6")
+        ]
+      };
+      
+      var openspaces = new FeatureLayer({
+        url:          "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
+        renderer: openSpacesRenderer,
+        opacity: 0.90,
+        //*** ADD ***//
+        outFields: ["SITE_NAME","FEE_OWNER","PRIM_PURP"],
+          popupTemplate: {
+            title: "Land Cover Use 2016",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "SITE_NAME  ",
+                    label: "Site Name"
+                  },
+                  {
+                    fieldName: "FEE_OWNER  ",
+                    label: "Owner"
+                  },
+                  {
+                    fieldName: "PRIM_PURP",
+                    label: "Primary Purpose"
+                  }
+                ]
+              }
+            ]
+          }
+      });
+
+      map.add(openspaces);
+             
+    });
+  </script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
