@@ -88,7 +88,7 @@ const layerList = new LayerList({
   view: view,
   listItemCreatedFunction: function(event) {
     const item = event.item;
-    if (item.layer.type != "group",item.title === "US Demographics") {
+    if (item.layer.type != "group",) {
       // don't show legend twice
       item.panel = {
         content: "legend",
