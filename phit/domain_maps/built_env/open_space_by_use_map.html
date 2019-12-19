@@ -119,25 +119,93 @@ view.ui.add(layerList, "bottom-left");
       }
 
       var openSpacesRenderer = {
-        type: "unique-value",
-        field: "PRIM_PURP",
-        uniqueValueInfos: [
-          createFillSymbol("R", "#ee5151"),
-          createFillSymbol("C", "#129fce"),
-          createFillSymbol("B", "#a7c637"),
-          createFillSymbol("H", "#9f559d"),
-          createFillSymbol("A", "#fd911f"),
-          createFillSymbol("W", "#ffdf40"),
-          createFillSymbol("S", "#f788d8"),
-          createFillSymbol("F", "#b8814b"),
-          createFillSymbol("U", "#3db09a"),
-          createFillSymbol("O", "#6a6ad6"),
-          createFillSymbol("X", "#f0f0f0")
-        ],
-        legendOptions: {
-    title: "Primary Use"
-  },
-      };
+  type: "unique-value",  // autocasts as new UniqueValueRenderer()
+  field: "PRIM_PURP",
+  defaultSymbol: { type: "simple-fill" },  // autocasts as new SimpleFillSymbol()
+  uniqueValueInfos: [{
+    // All features with value of "Conservation" will be blue
+    value: "C",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#F17474"
+    }
+  }, {
+    // All features with value of "Recreation" will be green
+    value: "R",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#43B1D8"
+    }
+  }, {
+    // All features with value of "Recreation and Conservation" will be red
+    value: "B",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#B9D15E"
+    }
+  }, {
+    // All features with value of "Water Supply Protection" will be yellow
+    value: "W",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#B177B0"
+    }
+  }, {
+    // All features with value of "Agriculture" will be yellow
+    value: "A",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#FDA84C"
+    }
+  }, {
+    // All features with value of "Historical/Cultural" will be yellow
+    value: "H",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#FFE565"
+    }
+  }, {
+    // All features with value of "Flood Control" will be yellow
+    value: "F",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#F9A1E0"
+    }
+  }, {
+    // All features with value of "Other" will be yellow
+    value: "O",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#C59A6E"
+    }
+  }, {
+    // All features with value of "Unknown" will be yellow
+    value: "X",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#63BFAD"
+    }
+  }, {
+    // All features with value of "Site is underwater" will be yellow
+    value: "U",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#8989DE"
+    }
+  }, {
+    // All features with value of "Scenic" will be yellow
+    value: "S",
+    symbol: {
+      type: "simple-fill",  // autocasts as new SimpleFillSymbol()
+      color: "#9f559d"
+    }
+  }]
+};
+
+var openspaces = new FeatureLayer({
+  url: "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
+  renderer: renderer
+});
       
       var popupPrimaryuse = {
         "title": "{SITE_NAME}",
