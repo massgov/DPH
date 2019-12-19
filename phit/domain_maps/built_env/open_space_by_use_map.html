@@ -121,6 +121,9 @@ view.ui.add(layerList, "bottom-left");
      var openSpacesRenderer = {
   type: "unique-value",  // autocasts as new UniqueValueRenderer()
   field: "PRIM_PURP",
+  legendOptions: {
+    title: "Primary Use"
+  },
   defaultSymbol: { type: "simple-fill" },  // autocasts as new SimpleFillSymbol()
   uniqueValueInfos: [{
   // All features with value of "Conservation" will be blue
