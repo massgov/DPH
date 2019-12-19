@@ -118,12 +118,12 @@ view.ui.add(layerList, "bottom-left");
         };
       }
 
-      var openSpacesRenderer = {
+     var openSpacesRenderer = {
   type: "unique-value",  // autocasts as new UniqueValueRenderer()
   field: "PRIM_PURP",
   defaultSymbol: { type: "simple-fill" },  // autocasts as new SimpleFillSymbol()
   uniqueValueInfos: [{
-    // All features with value of "Conservation" will be blue
+  // All features with value of "Conservation" will be blue
     value: "C",
     symbol: {
       type: "simple-fill",  // autocasts as new SimpleFillSymbol()
@@ -201,11 +201,6 @@ view.ui.add(layerList, "bottom-left");
     }
   }]
 };
-
-var openspaces = new FeatureLayer({
-  url: "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
-  renderer: renderer
-});
       
       var popupPrimaryuse = {
         "title": "{SITE_NAME}",
