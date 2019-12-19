@@ -88,8 +88,6 @@ const layerList = new LayerList({
   view: view,
   listItemCreatedFunction: function(event) {
     const item = event.item;
-     // change the title of the layer to something more descriptive
-      item.title = "Openspace by Primary Use";
     if (item.layer.type != "group") {
       // don't show legend twice
       item.panel = {
@@ -146,7 +144,6 @@ view.ui.add(layerList, "bottom-left");
       
       var openspaces = new FeatureLayer({
         url:          "https://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/openspace/FeatureServer/0",
-        label:"Openspace by Primary Use",
         //*** ADD ***//
         outFields: ["SITE_NAME","FEE_NAME","PRIM_PURP"],
 
